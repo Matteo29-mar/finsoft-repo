@@ -1,0 +1,6 @@
+stage:
+
+06/02/2023
+primo giorno stage, posto enorme e se non sei del posto ti puoi confondere di dove andare.
+Arrivato in ufficio ci hanno tramesso un ambiente sereno in cui lavorare nel momento giusto e ci si può rilassare o allentare la corda nei momenti più opportuni.
+mi è stato dato il pc aziendale con debian 10 poi ho messo debian 11, nel pomeriggio ho scaricat oun paio di software tra cui vscode, git, docker, apache2
