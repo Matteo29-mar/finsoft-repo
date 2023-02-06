@@ -1,15 +1,20 @@
 const http = require('http');
 const hostname = 'localhost';
 
-const port = 3000;
+const port = 5001;
 
 const server = http.createServer((req, res) => {
-
+if(req.url === '/' && req.method === 'GET'){
 res.statusCode = 200;
 
 res.setHeader('Content-Type', 'text/plain');
 
-res.end('Hello World, howtoforge');
+res.end('questa e una semplice web app di matteo');
+}else{
+    res.statusCode = 404;
+    res.end();
+}
+
 
 });
 
