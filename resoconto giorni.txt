@@ -7,3 +7,6 @@ mi è stato dato il pc aziendale con debian 10 poi ho messo debian 11, nel pomer
 poi ho fatto una piccola web app con nodejs solo get e conteinerizzata
 
 07/02/2023
+Giornata iniziata con l'assegnazione da parte del nostro tutor e un collega, di creare un sito web semplice del nostro curriculum, dato che non siamo web developer 
+non si apsettano un sito ben fatto, ma noi dobbiamo hostare il sito in un container il server web e possibilmente collegare un db per lanciarlo online.
+il sito l'ho già quasi finito devo creare il container e tutta la parte docker.
