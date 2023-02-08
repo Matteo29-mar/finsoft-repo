@@ -1,18 +1,43 @@
 <?php
 
-    $name = $_GET['name'];
-    $email = $_GET['email'];
-    $message = $_GET['message'];
 
-    $to = "matteomarziano.mm42@gmail.com";
-    $subject = "Nuovo messaggio dal sito";
-    $headers = "Da: $email\r\n";
-    $headers .= "Rispondi a: $email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $message = "<p>Nome: $name</p><p>Email: $email</p><p>Messaggio: $message</p>";
+$name = $_POST["name"];
+$email = $_POST["email"];
+$subject = $_POST["subject"];
+$message = $_POST["message"];
+//die(var_dump ($_POST));
+require "vendor/autoload.php";
 
-    mail($to, $subject, $message, $headers);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
-  
+$mail = new PHPMailer(true);
+
+// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+
+$mail->Host = "smtp.gmail.com";
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = 587;
+
+$mail->Username = "matteomarziano.mm42@gmail.com";
+$mail->Password = "Igriffin9@Mm20022906:)";
+
+$mail->setFrom($email, $name);
+$mail->addAddress("matteomarziano.mm42@gmail.com", "matteo");
+
+$mail->Subject = $subject;
+$mail->Body = $message;
+
+if(!$mail->send()) {
+    echo 'L\'email non è stata inviata.';
+    echo 'Errore: ' . $mail->ErrorInfo;
+} else {
+    echo 'L\'email è stata inviata correttamente.';
+}
+
+
+header("Location: contatti.html");
 ?>
