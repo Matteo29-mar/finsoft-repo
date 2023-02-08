@@ -15,10 +15,12 @@
   <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO</strong>
+        <strong>IL MIO PROFILO - CONTATTI</strong>
       </a>
+      <ul class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+      </ul>
       <div class="header__quick">
-        <a href="contatti.html">Contatti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
@@ -29,11 +31,16 @@
   </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('Cloud.jpg');">
-    <div class="cover__content">
-      <a href="chi_sono.html" class="button">Chi sono</a>
-      <a href="hobby.html" class="button">Hobby</a>
-      <a href="progetti.html" class="button">i miei progetti</a>
-    </div>
+  <form action="email.php" method="post">
+    <input type="text" name="name" placeholder="Nome">
+    <br><br>
+    <input type="email" email="email" placeholder="Email">
+    <br><br>
+    <textarea message="message" placeholder="Il tuo messaggio"request></textarea>
+    <br><br>
+    <input type="submit" value="Invia">
+    <br><br>
+  </form>
   </div>
    <script> 
     let item = document.querySelector('.icon-hamburger');

@@ -90,6 +90,9 @@ a{color: coral}
   background: #444; 
 }
 
+.form-text{
+  color: black;
+}
 /* ! Helpers  */
 .mt-0{margin-top: 0 }
 .mt-1{margin-top: 10px}
@@ -131,7 +134,13 @@ a{color: coral}
   display:flex; flex-direction:column; justify-content:center; 
   background-position: center center; background-size:cover;
 }
-.cover * {color:#fff}
+.cover-chisono{ 
+  text-align: left; padding:10px; margin:0px; min-height:600px; width:100%; 
+  display:flex; flex-direction:column; justify-content:center; 
+  background-position: center center; background-size:cover;
+  color: white;
+}
+.cover  {color:#fff}
 
 /* Hero */
 .blob{position: absolute; top:-20%; left:-20%; width: 140%;z-index: -1;}
