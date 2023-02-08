@@ -10,3 +10,7 @@ poi ho fatto una piccola web app con nodejs solo get e conteinerizzata
 Giornata iniziata con l'assegnazione da parte del nostro tutor e un collega, di creare un sito web semplice del nostro curriculum, dato che non siamo web developer 
 non si apsettano un sito ben fatto, ma noi dobbiamo hostare il sito in un container il server web e possibilmente collegare un db per lanciarlo online.
 il sito l'ho già quasi finito devo creare il container e tutta la parte docker.
+
+08/02/2023
+Prima parte della mattinata finito html e css, nella seconda parte della mattinata creazione modulo contatti con php per 
+inviare le email 
