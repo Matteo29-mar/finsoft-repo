@@ -13,4 +13,10 @@ il sito l'ho già quasi finito devo creare il container e tutta la parte docker.
 
 08/02/2023
 Prima parte della mattinata finito html e css, nella seconda parte della mattinata creazione modulo contatti con php per 
-inviare le email 
+inviare le email. nel pomeriggio mi sono accorto che è un processo troppo lungo e complesso.
+cambio approccio metto un link alla mia email e un form sempre.
+
+09/02/2023
+giorno di stage, continuo la mia progettazione di questo sito. 
+ho pensato di mettere un link ancora dei miei social e un form di commenti dove l'utente scrive il nome
+e il contenuto dove verranno caricati nel database.
