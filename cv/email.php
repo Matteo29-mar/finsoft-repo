@@ -1,43 +1,34 @@
 <?php
 
+$servername = "localhost";
+$username = "finsoft";
+$password = "finsoft";
+$dbname = "finsoft";
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
-//die(var_dump ($_POST));
-require "vendor/autoload.php";
+// Crea la connessione
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-
-$mail = new PHPMailer(true);
-
-// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-
-$mail->isSMTP();
-$mail->SMTPAuth = true;
-
-$mail->Host = "smtp.gmail.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
-
-$mail->Username = "matteomarziano.mm42@gmail.com";
-$mail->Password = "Igriffin9@Mm20022906:)";
-
-$mail->setFrom($email, $name);
-$mail->addAddress("matteomarziano.mm42@gmail.com", "matteo");
-
-$mail->Subject = $subject;
-$mail->Body = $message;
-
-if(!$mail->send()) {
-    echo 'L\'email non è stata inviata.';
-    echo 'Errore: ' . $mail->ErrorInfo;
-} else {
-    echo 'L\'email è stata inviata correttamente.';
+// Verifica la connessione
+if ($conn->connect_error) {
+  die("Connessione al database fallita: " . $conn->connect_error);
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $comment = $_POST['comment'];
+//die(var_dump ($_POST));
+  $sql = "INSERT INTO comments (name, email, comment)
+  VALUES ('$name', '$email', '$comment')";
 
-header("Location: contatti.html");
+  if ($conn->query($sql) === TRUE) {
+    echo "Commento salvato con successo";
+  } else {
+    echo "Errore durante il salvataggio del commento: " . $conn->error;
+  }
+}
+
+// Chiudi la connessione
+$conn->close();
+
 ?>

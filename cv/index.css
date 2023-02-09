@@ -150,3 +150,27 @@ a{color: coral}
 .footer{background-color: #EF6362;color:#fff}
 .footer-bottom{background-color: #ad3939;color:#fff; padding: 20px;text-align: center;margin-bottom: 0;}
 .footer-bottom a{color:#fff}
+
+/* Icon */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
