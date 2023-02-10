@@ -22,3 +22,8 @@ ho pensato di mettere un link ancora dei miei social e un form di commenti dove 
 e questi caricati sul database.
 Ci sono state delle difficoltà per dei permessi all'interno della macchina, quindi ho spostato il lavoro su un'altra macchina, li ho scaricato dei pacchetti di php, apache2 e mariadb server che avevo utilizzato per nextcloud, scaricato tutto ho fatto il db con le tabelle.
 Funziona!! manda il commento per visualizzarlo ho scaricato phpmyadmin e vedo i commenti.
+
+10/02/2023
+inzio con aggiustare il css e aggiungo il footer.
+mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i commenti che scrivo io 
+
