@@ -1,5 +1,5 @@
 /* Reset */
-body, html{ background-color: #444; font-family: 'Inter', sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+body, html{ background-color: #1d1d1f; font-family: 'Inter', sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
  
 /* Menu */
 :root { --menu-bg: #1d1d1f; --menu-color: #fff; }
@@ -104,7 +104,7 @@ a{color: coral}
 .hero{min-height: 100vh;display: flex;align-items: center; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
 
 /* Footer */
-.footer{background-color: #444;color:#fff;}
+.footer{background-color: #1d1d1f;color:#fff;}
 .footer-bottom{background-color: #16228f;color:#fff; padding: 20px;text-align: center;margin-bottom: 0;}
 .footer-bottom a{color:#fff}
 .footer__menu{padding: 0;margin: 0;}
