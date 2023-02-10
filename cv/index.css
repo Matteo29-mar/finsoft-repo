@@ -1,5 +1,5 @@
 /* Reset */
-body, html{ font-family: 'Inter', sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+body, html{ background-color: #444; font-family: 'Inter', sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
  
 /* Menu */
 :root { --menu-bg: #1d1d1f; --menu-color: #fff; }
@@ -33,6 +33,7 @@ body, html{ font-family: 'Inter', sans-serif; line-height: 1; font-size: 16px; b
   .header__quick{display: flex; justify-content: flex-end; width: 50%;}
 
 }
+
 
 
 /* ! Grid System */
@@ -71,10 +72,13 @@ a{color: coral}
 /* ! Helpers  */
 .mb-3{margin-bottom: 30px}
 
+.mt-2{margin-bottom: 20px}
+.mt-4{margin-top: 100px }
+
 .pt-4{padding-top: 15vh;}
 
 .pb-3{padding-bottom: 40px;}
-
+.pb-4{padding-bottom: 15vh;}
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -100,9 +104,13 @@ a{color: coral}
 .hero{min-height: 100vh;display: flex;align-items: center; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
 
 /* Footer */
-.footer{background-color: #EF6362;color:#fff}
-.footer-bottom{background-color: #ad3939;color:#fff; padding: 20px;text-align: center;margin-bottom: 0;}
+.footer{background-color: #444;color:#fff;}
+.footer-bottom{background-color: #16228f;color:#fff; padding: 20px;text-align: center;margin-bottom: 0;}
 .footer-bottom a{color:#fff}
+.footer__menu{padding: 0;margin: 0;}
+.footer__menu li{display: inline-block;}
+.footer__menu li a{color:var(--menu-color); opacity: 0.8;display: block;padding: 16px;font-size: 15px;}
+
 
 /* Icon */
 .fa {
