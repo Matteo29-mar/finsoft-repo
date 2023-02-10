@@ -17,6 +17,8 @@ inviare le email. nel pomeriggio mi sono accorto che è un processo troppo lungo
 cambio approccio metto un link alla mia email e un form sempre.
 
 09/02/2023
-giorno di stage, continuo la mia progettazione di questo sito. 
-ho pensato di mettere un link ancora dei miei social e un form di commenti dove l'utente scrive il nome
-e il contenuto dove verranno caricati nel database.
+giorno di smart working, continuo la mia progettazione di questo sito a cui collegherò un database e si interfaccierà con php. 
+ho pensato di mettere un link ancora dei miei social e un form di commenti dove l'utente scrive il nome e il contenuto che vuole
+e questi caricati sul database.
+Ci sono state delle difficoltà per dei permessi all'interno della macchina, quindi ho spostato il lavoro su un'altra macchina, li ho scaricato dei pacchetti di php, apache2 e mariadb server che avevo utilizzato per nextcloud, scaricato tutto ho fatto il db con le tabelle.
+Funziona!! manda il commento per visualizzarlo ho scaricato phpmyadmin e vedo i commenti.
