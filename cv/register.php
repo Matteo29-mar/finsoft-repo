@@ -1,5 +1,4 @@
 <?php
-$echo("ciao");
 $host = "localhost";
 $user = "finsoft";
 $password = "finsoft";
@@ -18,7 +17,7 @@ $password = $connessione->real_escape_string($_POST['password']);
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Inserisci i dati del nuovo utente nel database
-  $sql = "INSERT INTO utenti (email, name, password) VALUES ('$email','$name','$password')";
+  $sql = "INSERT INTO utenti (email, name, password) VALUES ('$email','$name','$hashed_password')";
 
   if($connessione->query($sql) === true){
     echo "Registrazione avvenuta con successo.";
@@ -28,4 +27,5 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     echo "Errore durante la registrazione. Riprova $sql.  " . $connessione->error;
   }
 
+  $connessione->close();
 ?> 

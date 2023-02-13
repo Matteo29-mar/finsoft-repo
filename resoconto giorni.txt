@@ -25,5 +25,12 @@ Funziona!! manda il commento per visualizzarlo ho scaricato phpmyadmin e vedo i 
 
 10/02/2023
 inzio con aggiustare il css e aggiungo il footer.
-mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i commenti che scrivo io 
+mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i commenti che scrivo io.
+Effetuata la sezione register e login, ho fatto html e il php la registrazione avviene ci sono dei problemi con il login.
+Risolto il problema del login, php non gli piacciono gli echo mettere i printf, manca solo hash della password.
+
+13/02/2023
+Inizio giornata mi reco in ufficio, il bus ha fatto tardi.
+Effettuo dei test register e login funzionano, in metà mattinata faccio hash della password(10 30) funziona, dava solo dedi problemami per la
+lunghezza ho aumentato la stringa nel db da 50 a 255. Adesso mi dedico alla parte della sezione privata.
 

@@ -24,6 +24,8 @@ if($result = $connessione->query($sql_select)){
         //print_r( $rows );
         printf("ID: %s Name: %s", $row["id"], $row["name"]); 
         
+    }else{
+        printf("errore, riprova!");
     }
 }
 
