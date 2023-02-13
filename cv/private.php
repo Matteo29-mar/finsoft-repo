@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+    header("location: login.html");
+    exit;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +31,11 @@
       <a class="header__logo" href="">
         <strong>IL MIO PROFILO</strong>
       </a>
+      <ul class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+      </ul>
       <div class="header__quick">
-        <a href="utente.html"> Utente</a>
+      <a href="logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
@@ -31,15 +46,15 @@
   </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('Cloud.jpg');">
-    <div class="cover__content">
-      <a href="chi_sono.html" class="button">Chi sono</a>
-      <a href="hobby.html" class="button">Hobby</a>
-      <a href="progetti.html" class="button">i miei progetti</a>
+        <div class="cover__content">
+            <h1> Area Privata </h1>
+            <?php
+                printf("ciao\n". $_SESSION["name"]);
+            ?>
+            <a href="commenti.html" class="button">Commenti</a>
+        </div>
     </div>
-  </div>
 
-
-  
   <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">
