@@ -29,7 +29,9 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO</strong>
+        <strong>IL MIO PROFILO -Area Privata di <?php
+                printf($_SESSION["name"]);
+            ?></strong>
       </a>
       <ul class="header__menu">
         <li><a href="index.html">HOME</a></li>
@@ -46,11 +48,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('Cloud.jpg');">
-        <div class="cover__content">
-            <h1> Area Privata </h1>
-            <?php
-                printf("ciao\n". $_SESSION["name"]);
-            ?>
+        <div class="cover__content">     
             <a href="commenti.html" class="button">Commenti</a>
         </div>
     </div>
