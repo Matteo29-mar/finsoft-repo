@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+    header("location: login.html");
+    exit;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +25,19 @@
 </head>
 <body>
 
-  <header class="header">
+  <div class="overflow-h">
+    <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO - HOBBY</strong>
+        <strong>IL MIO PROFILO -Area Privata di <?php
+                printf($_SESSION["name"]);
+            ?></strong>
       </a>
       <ul class="header__menu">
         <li><a href="index.html">HOME</a></li>
       </ul>
       <div class="header__quick">
-        <a href="utente.html"> Utente</a>
+      <a href="logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
@@ -31,34 +46,16 @@
       </div>
     </div>
   </header>
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/sky.jpg');">
-    <div class="grid grid--center text-left" id="">
-      <div class="col-70 text-center pt-4 pb-3">
-        <br><br>
-        <h2>I MIEI HOBBY</h2>
-      </div>
-      <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/trading.jpeg">
-        <h4>Trading</h4>
-        <p>Questo mio hobby è particolare, perché vado a consultare grafici di vari asset finanziari( azioni, valute,
-          materie prime . . .) e in base a quello che vedo nei grafici, riesco a darmi le risposte del perché
-          succedono determinati eventi nel mondo.</p>
-      </div>
-      <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/cali.jpg" alt="">
-        <h4>Calisthenics</h4>
-        <p>Il Calisthenics é molto importante per me, perché oltre a farmi rimanere in forma mi fa diminuire lo
-          stress e mi fa stare bene con me stesso</p>
-      </div>
-      <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/lettura.jpeg">
-        <h4>lettura</h4>
-        <p>La lettura é un'attività che mi rilassa, leggo se posso nel tragitto per andare a scuola oppure quando
-          sono al bar con un bel caffè</p>
-      </div>
+
+  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/Cloud.jpg');">
+        <div class="cover__content">     
+            <a href="commenti.html" class="button">Commenti</a>
+            <a href="list_comments_root.php" class="button">Elenco</a>
+
+
+        </div>
     </div>
-     
-  </div>
+
   <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">
@@ -75,13 +72,15 @@
   <p class="footer-bottom">
     Template by Matteo Marziano - <a href="">Privacy Policy</a>
   </p>
-  
+
    <script> 
     let item = document.querySelector('.icon-hamburger');
     item.addEventListener("click", function() {
       document.body.classList.toggle('menu-open');
     });
    </script>
+  </div>
+  
 
 </body>
 </html>

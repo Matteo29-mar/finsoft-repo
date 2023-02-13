@@ -21,7 +21,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
   if($connessione->query($sql) === true){
     echo "Registrazione avvenuta con successo.";
-
+    header('Refresh: 2; URL=login.html');
    
   }else {
     echo "Errore durante la registrazione. Riprova $sql.  " . $connessione->error;

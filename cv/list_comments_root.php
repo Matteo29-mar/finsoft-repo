@@ -9,7 +9,6 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +30,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       <a class="header__logo" href="">
         <strong>IL MIO PROFILO -Area Privata di <?php
                 printf($_SESSION["name"]);
-            ?></strong>
+            ?> </strong>
       </a>
       <ul class="header__menu">
+        <li><a href="privateroot.php"><<</a></li>
         <li><a href="index.html">HOME</a></li>
+
       </ul>
       <div class="header__quick">
       <a href="logout.php"> Disconetti</a>
@@ -48,9 +49,42 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/Cloud.jpg');">
-        <div class="cover__content">     
-            <a href="commenti.html" class="button">Commenti</a>
-            <a href="list_comments.php" class="button">Elenco</a>
+        <div class="cover__content grid grid--center text-center">     
+           <?php
+
+                $host = "localhost";
+                $user = "finsoft";
+                $password = "finsoft";
+                $db = "finsoft";
+
+                // Connessione al database
+                $connessione = new mysqli($host, $user, $password, $db);
+
+                // Verifica della connessione
+                if (!$connessione) {
+                    die("Connessione fallita: " . mysqli_error());
+                }
+
+                // Selezione dei dati dal database
+                $sql = "SELECT * FROM comments";
+                $result = mysqli_query($connessione, $sql);
+
+                // Visualizzazione dei dati
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<table>";
+                    echo "<tr><th>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Comment</th></tr>";
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr><td>" . $row["id"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["name"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["email"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["comment"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    printf("Nessun risultato trovato nel database");
+                }
+
+                // Chiusura della connessione
+                mysqli_close($connessione);
+            ?>
+
         </div>
     </div>
 
@@ -70,7 +104,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   <p class="footer-bottom">
     Template by Matteo Marziano - <a href="">Privacy Policy</a>
   </p>
-
+  
    <script> 
     let item = document.querySelector('.icon-hamburger');
     item.addEventListener("click", function() {
