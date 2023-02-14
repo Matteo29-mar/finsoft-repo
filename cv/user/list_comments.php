@@ -24,34 +24,32 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 </head>
 <body>
 
-  <div class="overflow-h">
+
     <header class="header">
-    <div class="header__content">
-      <a class="header__logo" href="">
-        <strong>IL MIO PROFILO -Area Privata di <?php
+      <div class="header__content">
+        <a class="header__logo" href="">
+            <strong>IL MIO PROFILO -Area Privata di <?php
                 printf($_SESSION["name"]);
             ?> </strong>
-      </a>
-      <ul class="header__menu">
-        <li><a href="private.php">area privata</a></li>
-        <li><a href="../index.html">HOME</a></li>
-
-      </ul>
-      <div class="header__quick">
-      <a href="../logout.php"> Disconetti</a>
+        </a>
+        <ul class="header__menu">
+          <li><a href="private.php">area privata</a></li>
+          <li><a href="../index.html">HOME</a></li>
+        </ul>
+        <div class="header__quick">
+        <a href="../logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/Cloud.jpg');">
-        <div class="cover__lista grid grid--center text-center">     
-           <?php
-
+    <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/Cloud.jpg');">
+          <div class="cover__lista grid grid--center text-center">     
+             <?php
                 $host = "localhost";
                 $user = "finsoft";
                 $password = "finsoft";
@@ -85,12 +83,11 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
                 // Chiusura della connessione
                 mysqli_close($connessione);
-            ?>
-
+              ?>
         </div>
     </div>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">
         <h3>contatti</h3>
@@ -102,10 +99,10 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       </div>
       
     </div>
-  </footer>
-  <p class="footer-bottom">
+    </footer>
+    <p class="footer-bottom">
     Template by Matteo Marziano - <a href="">Privacy Policy</a>
-  </p>
+    </p>
   
    <script> 
     let item = document.querySelector('.icon-hamburger');
@@ -113,7 +110,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       document.body.classList.toggle('menu-open');
     });
    </script>
-  </div>
+
   
 
 </body>
