@@ -26,6 +26,7 @@
     if ($result) {
         echo "Commento aggiornato con successo.";
         echo "<script>window.close();</script>";
+
     } else {
         echo "Errore durante l'aggiornamento del commento: " . mysqli_error();
     }

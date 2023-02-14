@@ -77,6 +77,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
               <th>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
               <th>Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
               <th>Modifica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+              <th>Elimina&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
               </tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
@@ -84,12 +85,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                   <td>" . $row["email"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                   <td>" . $row["comment"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                   <td>
-                      <a href='#' onclick='openPopup(\"" . $row["id"] . "\", \"" . $row["name"] . "\", \"" . $row["email"] . "\", \"" . $row["comment"] . "\")'>
+                      <a href='list_comments_root.php' onclick='openPopup(\"" . $row["id"] . "\", \"" . $row["name"] . "\", \"" . $row["email"] . "\", \"" . $row["comment"] . "\")'>
                           <span style='font-size:25px;'>&#128221;</span>
                       </a>
                   </td>
                   </tr>";
-        }
+        }//aggiunta elimina
         echo "</table>";
     } else {
         printf("Nessun risultato trovato nel database");
@@ -118,7 +119,9 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
         popup.document.write("</form>");
     }
 </script>
-
+<script>setTimeout(function(){
+            location.reload(); //serve per la pagina corrente
+        }, 5000);</script>
       </div>
   </div>
 
