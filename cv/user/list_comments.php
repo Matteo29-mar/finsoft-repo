@@ -49,7 +49,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/Cloud.jpg');">
-        <div class="cover__content grid grid--center text-center">     
+        <div class="cover__lista grid grid--center text-center">     
            <?php
 
                 $host = "localhost";
@@ -74,9 +74,9 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                 // Visualizzazione dei dati
                 if (mysqli_num_rows($result) > 0) {
                     echo "<table>";
-                    echo "<tr><th>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Comment</th></tr>";
+                    echo "<tr><th>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Comment</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr><td>" . $row["id"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["name"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["email"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["comment"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>";
+                        echo "<tr><td>" . $row["name"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["email"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" . $row["comment"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>";
                     }
                     echo "</table>";
                 } else {
