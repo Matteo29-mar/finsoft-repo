@@ -8,50 +8,53 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
-
+<link rel="stylesheet" href="../index.css">
 </head>
 <body>
 
   <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO - COMMENTI</strong>
+        <strong>IL MIO PROFILO - PROGETTI</strong>
       </a>
       <ul class="header__menu">
         <li><a href="private.php">area privata</a></li>
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="../index.html">HOME</a></li>
       </ul>
-      <div class="header__quick">
-        <a href="utente.html"> Login</a>
-
           <div class="icon-hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
-      </div>
     </div>
   </header>
-  
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/Cloud.jpg');">
-    <h2>COMMENTI</h2>
-    <form action="email.php" method="post">
-    <input type="text" name="name" placeholder="Nome">
-    <br><br>
-    <input type="text" name="subject" value="form contatti" hidden>
-    <input type="email" name="email" placeholder="Email">
-    <br><br>
-    <textarea name="comment" placeholder="Il tuo messaggio"request></textarea>
-    <br><br>
-    <input type="submit" value="Invia">
-    <br><br>
-  </form>
-
-  <div class="cover__content">     
-    <a href="list_comments.php" class="button">Elenco commenti</a>
-</div>
+  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/sky.jpg');">
+    <div class="grid grid--center text-left" id="">
+      <div class="col-70 text-left pt-4 pb-3">
+        <h2>I MIEI PROGETTI</h2>
+      </div>
+      <div class="col-33 mb-3">
+        <img class="img-res img-small round" src="../img/nxc.jpg">
+        <h4>Nextcloud</h4>
+        <p>
+          Il progetto nasce dalla necessità di avere un proprio spazio sul cloud. 
+          Per realizzarlo, ho utilizzato un computer che funge da server, sul quale ho installato Debian 11, Apache2, MySQL, PHP, il software Nextcloud e Tailscale (servizio VPN). 
+          Con questo sistema posso caricare documenti e file che in passato erano salvati localmente o su altri provider.
+        </p>
+      </div>
+      <div class="col-33 mb-3">
+        <img class="img-res img-small round" src="../img/has.jpg" alt="">
+        <h4>Home-Assistant</h4>
+        <p>
+          Il progetto ha l'obiettivo di avere un controllo completamente personalizzato della casa. 
+          Per realizzarlo, ho usato un Raspberry Pi 4, un SSD da 250 GB (per salvare i backup e i file della casa) e l'immagine di Home Assistant. 
+          Con Home Assistant, posso controllare la casa da remoto tramite telefono o computer, accendere o spegnere le luci, aprire le porte e, grazie a opportuni sensori, monitorare vari parametri.
+        </p>
+      </div>
+    </div>
+     
   </div>
+  
   <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">

@@ -33,5 +33,8 @@ Risolto il problema del login, php non gli piacciono gli echo mettere i printf, 
 Inizio giornata mi reco in ufficio, il bus ha fatto tardi.
 Effettuo dei test register e login funzionano, in metà mattinata faccio hash della password(10 30) funziona, dava solo dedi problemami per la
 lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia registrato o che digiti una password errata non può entrare
- Adesso mi dedico alla parte della sezione privata.
+ Adesso mi dedico alla parte della sezione privata. la sezione privata funziona, ma devo vedere cosa mettere nelle varie sezioni root e utente.
+
+ 14/02/2023
+ Mi dedico alla modifica ed eliminare i commenti, la modifica funziona ma non mi refresha la pagina 
 

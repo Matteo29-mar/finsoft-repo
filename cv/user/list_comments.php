@@ -1,8 +1,8 @@
-<?php
+ <?php
 
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
-    header("location: login.html");
+    header("location: ../login.html");
     exit;
 }
 
@@ -19,7 +19,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="../index.css">
 
 </head>
 <body>
@@ -33,12 +33,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
             ?> </strong>
       </a>
       <ul class="header__menu">
-        <li><a href="privateroot.php"><<</a></li>
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="private.php">area privata</a></li>
+        <li><a href="../index.html">HOME</a></li>
 
       </ul>
       <div class="header__quick">
-      <a href="logout.php"> Disconetti</a>
+      <a href="../logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
@@ -48,7 +48,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     </div>
   </header>
 
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/Cloud.jpg');">
+  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/Cloud.jpg');">
         <div class="cover__content grid grid--center text-center">     
            <?php
 
@@ -66,7 +66,9 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                 }
 
                 // Selezione dei dati dal database
-                $sql = "SELECT * FROM comments";
+                $name= $_SESSION['name'];
+                $sql = "SELECT * FROM comments WHERE name = '$name'";
+
                 $result = mysqli_query($connessione, $sql);
 
                 // Visualizzazione dei dati

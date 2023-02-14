@@ -8,52 +8,44 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="../index.css">
 
 </head>
 <body>
 
-
-  <div class="overflow-h">
-    <header class="header">
+  <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO</strong>
+        <strong>IL MIO PROFILO - CHI SONO</strong>
       </a>
       <ul class="header__menu">
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="private.php">area privata</a></li>
+        <li><a href="../index.html">HOME</a></li>
       </ul>
-      <div class="header__quick">
           <div class="icon-hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
-      </div>
+
     </div>
   </header>
-
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/Cloud.jpg');">
-    <div class="cover__content">
-        <form action="register.php" method="POST">
-            <h2>REGISTRATI</h2>
-            <input type="email" name="email" placeholder="Email">
-            <br><br>
-            <input type="text" name="subject" value="form contatti" hidden>
-            <input type="text" name="name" placeholder="Nome">
-            <br><br>
-            <input type="password" name="password" placeholder="password"request></textarea>
-            <br><br>
-            <input type="submit" value="Invia">
-            <br><br>
-            <p> hai già un account? <a href="login.html">Accedi</a></p>
-            <br><br>
-        </form>
+  <div class="cover-chisono" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/sky.jpg');">
+    <div class="grid hero" id="home">
+      <div class="col-50 pt-4 text-left">
+        <p>
+          Studente in informatica, presso ITS Piemonte di Torino e stagista presso la Present s.p.a, programmatore e trader nel tempo libero.
+          Mi piace  lavorare su progetti stimolanti avendo sempre qualcosa da fare durante la giornata.
+          Ho iniziato la mia prima esperienza nel mondo del lavoro a 18 anni, lavorando come stagista informatico presso un negozio della mia città. Successivamente, dopo aver concluso le scuole superiori sto continuando a studiare informatica, specializzandomi nel settore del cloud computing.
+          Man mano che continuo a studiare e allargare le mie conoscenze, mi rendo conto che vorrò un lavoro stimolante e divertente, che mi porti a migliorare sempre ed essere al passo con il  mondo dell'informatica .
+        </p>
+        
+      </div>
+      <div class="col-50 p-3 relative">
+        <img src="../img/teo.png" class="img-res" alt="">
+      </div>
     </div>
   </div>
-
-
-  
   <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">
@@ -76,8 +68,6 @@
       document.body.classList.toggle('menu-open');
     });
    </script>
-  </div>
-  
 
 </body>
 </html>
