@@ -26,28 +26,22 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 <body>
 
   <div class="overflow-h">
-    <header class="header">
-    <div class="header__content">
-      <a class="header__logo" href="">
-        <strong>IL MIO PROFILO -Area Privata di <?php
-                printf($_SESSION["name"]);
-            ?></strong>
-      </a>
-      <ul class="header__menu">
-        <li><a href="../index.html">HOME</a></li>
-        
-
-      </ul>
-      <div class="header__quick">
-      <a href="../logout.php"> Disconetti</a>
+  <header class="header">
+      <div class="header__content">
+        <a class="header__logo" href="">
+          <strong>IL MIO PROFILO - <?php printf($_SESSION["name"]);?></strong>
+        </a>
+        <div class="header__quick">
+          <a href="../index.html"> HOME&nbsp;&nbsp;</a>
+          <a href="../logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
   <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/Cloud.jpg');">
         <div class="cover__content">     

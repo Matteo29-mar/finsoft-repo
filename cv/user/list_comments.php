@@ -23,21 +23,15 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 </head>
 <body>
-
-
     <header class="header">
       <div class="header__content">
         <a class="header__logo" href="">
-            <strong>IL MIO PROFILO -Area Privata di <?php
-                printf($_SESSION["name"]);
-            ?> </strong>
+          <strong>IL MIO PROFILO - <?php printf($_SESSION["name"]);?></strong>
         </a>
-        <ul class="header__menu">
-          <li><a href="private.php">area privata</a></li>
-          <li><a href="../index.html">HOME</a></li>
-        </ul>
         <div class="header__quick">
-        <a href="../logout.php"> Disconetti</a>
+          <a href="private.php">area privata&nbsp;&nbsp;</a>
+          <a href="../index.html"> HOME&nbsp;&nbsp;</a>
+          <a href="../logout.php"> Disconetti</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>

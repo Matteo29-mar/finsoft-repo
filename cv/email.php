@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($conn->query($sql) === TRUE) {
     echo "Commento salvato con successo";
-    header("location: ../user/commenti_user.html");
+    header("location: user/commenti_user.html");
 
   } else {
     echo "Errore durante il salvataggio del commento: " . $conn->error;

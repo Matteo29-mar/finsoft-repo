@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
 
 </head>
+
 <body>
 
   <header class="header">
@@ -18,20 +20,19 @@
       <a class="header__logo" href="">
         <strong>IL MIO PROFILO - HOBBY</strong>
       </a>
-      <ul class="header__menu">
-        <li><a href="index.html">HOME</a></li>
-      </ul>
       <div class="header__quick">
-        <a href="utente.html"> Utente</a>
-          <div class="icon-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <a href="index.html"> HOME&nbsp;&nbsp;</a>
+        <a href="login.html"> LOGIN</a>
+        <div class="icon-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </header>
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/sky.jpg');">
+  <div class="cover"
+    style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/sky.jpg');">
     <div class="grid grid--center text-left" id="">
       <div class="col-70 text-center pt-4 pb-3">
         <br><br>
@@ -57,7 +58,7 @@
           sono al bar con un bel caffè</p>
       </div>
     </div>
-     
+
   </div>
   <footer class="footer">
     <div class="grid grid--center text-center">
@@ -69,19 +70,20 @@
           <li><a href="mailto:https://www.matteomarziano.mm42@gmail.com" class="fa fa-google"></a></li>
         </ul>
       </div>
-      
+
     </div>
   </footer>
   <p class="footer-bottom">
     Template by Matteo Marziano - <a href="">Privacy Policy</a>
   </p>
-  
-   <script> 
+
+  <script>
     let item = document.querySelector('.icon-hamburger');
-    item.addEventListener("click", function() {
+    item.addEventListener("click", function () {
       document.body.classList.toggle('menu-open');
     });
-   </script>
+  </script>
 
 </body>
+
 </html>
