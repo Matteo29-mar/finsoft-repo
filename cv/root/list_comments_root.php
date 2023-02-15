@@ -114,7 +114,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 </script>
 <script>setTimeout(function(){
             location.reload(); //serve per la pagina corrente
-        }, 5000);</script>
+        }, 15000);</script>
       </div>
   </div>
 
