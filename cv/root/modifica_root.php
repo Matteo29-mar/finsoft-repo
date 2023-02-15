@@ -3,6 +3,7 @@
     $user = "finsoft";
     $password = "finsoft";
     $db = "finsoft";
+    
 
     // Connessione al database
     $connessione = new mysqli($host, $user, $password, $db);
@@ -29,6 +30,8 @@
 
     } else {
         echo "Errore durante l'aggiornamento del commento: " . mysqli_error();
+        header("location: list_comments_root.html");
+
     }
 
     // Chiusura della connessione

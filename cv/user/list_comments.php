@@ -73,6 +73,8 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                     echo "</table>";
                 } else {
                     printf("Nessun risultato trovato nel database");
+                    header("location: ../index.html");
+
                 }
 
                 // Chiusura della connessione

@@ -25,6 +25,8 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
    
   }else {
     echo "Errore durante la registrazione. Riprova $sql.  " . $connessione->error;
+    header('Refresh: 2; URL=register.html');
+
   }
 
   $connessione->close();

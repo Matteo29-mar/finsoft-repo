@@ -38,10 +38,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
             } else {
                 printf("password errata");
+                header('URL=login.html');
+
             }
     
         } else {
-            printf("account non esiste"); 
+            printf("account non esiste");
+            header('Refresh: 2; URL=register.html');
+
         }
     }
     $connessione->close();

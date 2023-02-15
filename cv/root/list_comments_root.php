@@ -56,10 +56,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     // Verifica della connessione
     if (!$connessione) {
         die("Connessione fallita: " . mysqli_error());
+        header("location: ../index.html");
+
     }
 
     // Selezione dei dati dal database
-    $sql = "SELECT * FROM comments";
+    $sql = "SELECT * FROM comments WHERE id <> 1 ";
     $result = mysqli_query($connessione, $sql);
 
     // Visualizzazione dei dati
@@ -78,8 +80,13 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                   <td>" . $row["email"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                   <td>" . $row["comment"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                   <td>
-                      <a href='list_comments_root.php' onclick='openPopup(\"" . $row["id"] . "\", \"" . $row["name"] . "\", \"" . $row["email"] . "\", \"" . $row["comment"] . "\")'>
+                      <a href='list_comments_root.php' onclick='updatePopup(\"" . $row["id"] . "\", \"" . $row["name"] . "\", \"" . $row["email"] . "\", \"" . $row["comment"] . "\")'>
                           <span style='font-size:25px;'>&#128221;</span>
+                      </a>
+                  </td>  
+                  <td>
+                      <a href='list_comments_root.php' onclick='deletePopup(\"" . $row["id"] . "\", \"" . $row["name"] . "\", \"" . $row["email"] . "\", \"" . $row["comment"] . "\")'>
+                          <span style='font-size:25px;'>&#10060;</span>
                       </a>
                   </td>
                   </tr>";
@@ -87,6 +94,8 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
         echo "</table>";
     } else {
         printf("Nessun risultato trovato nel database");
+        header("location:privateroot.php");
+
     }
 
     // Chiusura della connessione
@@ -94,7 +103,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 ?>
 
 <script>
-    function openPopup(id, name, email, comment) {
+    function updatePopup(id, name, email, comment) {
         // Apri la finestra popup
         var popup = window.open("", "Modifica Commento", "width=400, height=400");
 
@@ -112,6 +121,26 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
         popup.document.write("</form>");
     }
 </script>
+
+<script>
+  function deletePopup(id, name, email, comment) {
+  if (confirm("Sei sicuro di voler eliminare questo commento?")) {
+    // Crea una richiesta HTTP per eliminare il commento 
+    var xhttp = new XMLHttpRequest();//oggetto per creare chiamate http asincrone e ricevere una risposta in testo
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        // Ricarica la pagina per visualizzare l'elenco aggiornato dei commenti
+        location.reload();
+      }
+    };
+    xhttp.open("POST", "elimina_root.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("id=" + id);
+}
+}
+
+</script>
+
 <script>setTimeout(function(){
             location.reload(); //serve per la pagina corrente
         }, 15000);</script>
