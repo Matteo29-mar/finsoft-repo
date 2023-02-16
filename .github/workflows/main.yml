@@ -20,7 +20,7 @@ jobs:
         with:
           username: ${{secrets.DOCKER_USERNAME}}
           password: ${{secrets.DOCKER_PASSWORD}}
-      - name: Build and push mysite
+      - name: Build and push mysite docker image
         uses: docker/build-push-action@v3
         with:
           file: "cv/dockerfile"
