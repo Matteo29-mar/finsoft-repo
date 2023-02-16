@@ -1,0 +1,32 @@
+version: "3.1"
+
+services:
+  
+  #db mysite
+  mysitedb:
+    image: mariadb:latest
+    container_name: mysite
+    ports:
+      - "3307:3306"
+    restart: always
+    environment:
+      MARIADB_USER: finsoft
+      MARIADB_PASSWORD: finsoft
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: finsoft
+    networks:
+      - mysite
+  #mysite
+  mysite:
+
+    container_name: mysite-micro
+    image: matteo29mar/mysite:1.0
+    ports:
+      - "8080:8080"
+    networks:
+      - mysite
+    depends_on:
+      - mysitedb
+
+networks:
+      mysite:
