@@ -1,4 +1,4 @@
-name: finsoft-repo CI/CD
+name: mysite CI/CD
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  mysite-micro:
+  books-micro:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,9 +23,7 @@ jobs:
       - name: Build and push mysite docker image
         uses: docker/build-push-action@v3
         with:
-          file: "cv/dockerfile"
+          file: "cv/Dockerfile"
           push: true
           tags: matteo29mar/mysite:${{github.run_number}}
-          
-          
           
