@@ -46,5 +46,10 @@ lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia r
  nel finire della mattinata ho modificato il css che era tutto storto, i prossimi progetti li faccio con bootstrap.
  nel pomeriggio mi sono dedicato alla funzione elimina, parte tutto ok! ho usato una funziona javascript che utilizza il metodo XmlRequestHtpp per iniviare
  in modo asincrono richieste al server e ricevere una risposta in modo testuale.
- ora penso che mi dedico o al dockerfile oppure alla roba di ricorda password
+ ora penso che mi dedico o al dockerfile oppure alla roba di ricorda password. 
+ mi dedico al dockerfile, verso fine giornata ci hanno comunicato che da lunedì ci dedicheremo al nostro possibile 
+ project work, una possibile web app dove uploadare i file, veramente fiho.
 
+16/02/2023
+giorno da remoto, mi dedico al dockerfile come ultima cosa tanto il progetto portofolio è finito domani ci spiegano 
+il nostro progetto e lunedì lo iniziamo.
