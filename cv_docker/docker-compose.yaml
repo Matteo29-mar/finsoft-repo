@@ -4,7 +4,7 @@ services:
   
   #db mysite
   mysitedb:
-    image: mariadb:latest
+    image: mysitedb:1.0
     container_name: mysite
     ports:
       - "3307:3306"
@@ -15,18 +15,22 @@ services:
       MARIADB_RANDOM_ROOT_PASSWORD: "yes"
       MARIADB_DATABASE: finsoft
     networks:
-      - mysite
+      - mysitedocker
+    volumes:
+      - /home/finsoft/finsoft-repo/cv_docker:/opt:rw
   #mysite
-  mysite:
+  mysitedocker:
 
-    container_name: mysite-micro
-    image: matteo29mar/mysite:1.0
+    container_name: mysitedocker-micro
+    image: mysite:1.1
     ports:
-      - "8080:8080"
+      - "8080:80"
     networks:
-      - mysite
+      - mysitedocker
     depends_on:
       - mysitedb
+    volumes:
+      - /home/finsoft/finsoft-repo/cv_docker:/var/www/html:rw
 
 networks:
-      mysite:
+      mysitedocker:

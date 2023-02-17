@@ -1,0 +1,5 @@
+
+FROM mariadb:latest
+
+
+CMD cat /opt/finsoft.sql | mysql -u finsoft -p finsoft

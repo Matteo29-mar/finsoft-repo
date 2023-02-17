@@ -1,6 +1,7 @@
 <?php
+include_once('config.php');
 
-$host = "localhost";
+$host = DB_HOST;
 $user = "finsoft";
 $password = "finsoft";
 $db = "finsoft";
