@@ -53,3 +53,11 @@ lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia r
 16/02/2023
 giorno da remoto, mi dedico al dockerfile come ultima cosa tanto il progetto portofolio è finito domani ci spiegano 
 il nostro progetto e lunedì lo iniziamo.
+
+17/02/2023
+Oggi ci presentano il nostro progetto, una web app di caricamento di immagini max 10mb, per vendere dei proddotti. diviso in :
+-privato entra nella index per vendere le sue cose sul sito, solo un file 
+-aziendale vari file, login-register- elenco
+-l'unica cosa comune il css e il js 
+-superadmin possibiltà di modificare le chiamate delle inserzioni
+no pop-up ma modali
