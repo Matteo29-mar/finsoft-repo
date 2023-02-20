@@ -66,4 +66,5 @@ no pop-up ma modali
 il giorno è iniziato con la creazione del team per il progetto, sono nominato team leader, abbiamo scelto i ruoli.
 usiamo per la web app, apche2, mysql, php , html e css con aggiutna di javascript.
 adesso sto facendo i branch le issue e il diagramma per la web app.
-dopo aver creato lo schema delle relazione delle varie entità che serviranno per il progetto, per oggi mi dedico alla ricerca da domani si inizia a sviluppare 
+dopo aver creato lo schema delle relazione delle varie entità che serviranno per il progetto, per oggi mi dedico alla ricerca da domani si inizia a sviluppare .
+oggi ho usato mysql-workbench per gestire online il database che poi servirà per le chiamate
