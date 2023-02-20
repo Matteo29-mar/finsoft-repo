@@ -67,4 +67,6 @@ il giorno è iniziato con la creazione del team per il progetto, sono nominato t
 usiamo per la web app, apche2, mysql, php , html e css con aggiutna di javascript.
 adesso sto facendo i branch le issue e il diagramma per la web app.
 dopo aver creato lo schema delle relazione delle varie entità che serviranno per il progetto, per oggi mi dedico alla ricerca da domani si inizia a sviluppare .
-oggi ho usato mysql-workbench per gestire online il database che poi servirà per le chiamate
+oggi ho usato mysql-workbench per gestire online il database che poi servirà per le chiamate all'interno del web app.
+la giornata è terminata con la creazione del team, lo schema relazionale che dovrà essere modificato in seguito, l'asseganzione delle issue, delle tecnologie da usare
+e la creazione delle tabelle
