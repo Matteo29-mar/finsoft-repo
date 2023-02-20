@@ -61,3 +61,8 @@ Oggi ci presentano il nostro progetto, una web app di caricamento di immagini ma
 -l'unica cosa comune il css e il js 
 -superadmin possibiltà di modificare le chiamate delle inserzioni
 no pop-up ma modali
+
+18/02/2023
+il giorno è iniziato con la creazione del team per il progetto, sono nominato team leader, abbiamo scelto i ruoli.
+usiamo per la web app, apche2, mysql, php , html e css con aggiutna di javascript.
+adesso sto facendo i branch le issue e il diagramma per la web app.
