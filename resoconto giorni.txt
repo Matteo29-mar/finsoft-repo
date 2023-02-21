@@ -54,7 +54,7 @@ lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia r
 giorno da remoto, mi dedico al dockerfile come ultima cosa tanto il progetto portofolio è finito domani ci spiegano 
 il nostro progetto e lunedì lo iniziamo.
 
-17/02/2023
+19/02/2023
 Oggi ci presentano il nostro progetto, una web app di caricamento di immagini max 10mb, per vendere dei proddotti. diviso in :
 -privato entra nella index per vendere le sue cose sul sito, solo un file 
 -aziendale vari file, login-register- elenco
@@ -62,7 +62,7 @@ Oggi ci presentano il nostro progetto, una web app di caricamento di immagini ma
 -superadmin possibiltà di modificare le chiamate delle inserzioni
 no pop-up ma modali
 
-18/02/2023
+20/02/2023
 il giorno è iniziato con la creazione del team per il progetto, sono nominato team leader, abbiamo scelto i ruoli.
 usiamo per la web app, apche2, mysql, php , html e css con aggiutna di javascript.
 adesso sto facendo i branch le issue e il diagramma per la web app.
@@ -70,3 +70,8 @@ dopo aver creato lo schema delle relazione delle varie entità che serviranno pe
 oggi ho usato mysql-workbench per gestire online il database che poi servirà per le chiamate all'interno del web app.
 la giornata è terminata con la creazione del team, lo schema relazionale che dovrà essere modificato in seguito, l'asseganzione delle issue, delle tecnologie da usare
 e la creazione delle tabelle
+
+21/02/2023
+mattinata iniziata con la revisione del database, ho apsettato che i miei colleghi facessero e pushassero su main i loro front-end dell'area privata e del form.
+ho conluso la mattinata facendo il diagramma e il il database.
+nel pomeriggio farò delel cartelle per il db e magari del back-end di qualche passsaggio.
