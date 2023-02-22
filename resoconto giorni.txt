@@ -75,3 +75,7 @@ e la creazione delle tabelle
 mattinata iniziata con la revisione del database, ho apsettato che i miei colleghi facessero e pushassero su main i loro front-end dell'area privata e del form.
 ho conluso la mattinata facendo il diagramma e il il database.
 nel pomeriggio farò delel cartelle per il db e magari del back-end di qualche passsaggio.
+
+22/02/2023
+assegnati i nuovi task della giorata, mi affretto a testare il back end della pagina login e regisstrazione non appena il mio collega pusha su git hub il suo lavoro. nel pomeriggio
+inizio a testare
