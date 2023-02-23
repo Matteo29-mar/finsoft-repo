@@ -78,4 +78,13 @@ nel pomeriggio farò delel cartelle per il db e magari del back-end di qualche p
 
 22/02/2023
 assegnati i nuovi task della giorata, mi affretto a testare il back end della pagina login e regisstrazione non appena il mio collega pusha su git hub il suo lavoro. nel pomeriggio
-inizio a testare
+inizio a testare.
+La maggior parte del lavoro che avevamo fatto no vabene. il form del privato per caricare l'immagine e i dati 
+dell'utente troppo povera dovremmo aggiungere una navabar, footer e immagine di sfondo. Sono venute
+delle complicanze su cosa decidere per il css perchè la pagina privato e azienda non sono uguali. Quindi è da fare
+ache l'azienda da capo.
+3 componenti del gruppo si sono dedicati al front-end della pagina, io nel pomeriggio mi sono portato avanti con
+l'inserimento delle immagini tramite form.
+
+23/02/2023
+Oggi giornata di smart, cerco di risolvere il problema delle immagini.
