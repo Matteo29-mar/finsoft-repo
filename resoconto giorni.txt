@@ -88,3 +88,14 @@ l'inserimento delle immagini tramite form.
 
 23/02/2023
 Oggi giornata di smart, cerco di risolvere il problema delle immagini.
+ho passato la mattinata ha risolvere il problema delle immagini, risolto lo script era giusto ma non avevo i premessi 
+per caricare l'immagine da form html all cartella del server web di apache2,
+ho usato chmod 777 uploads/ , che è il nome della cartella 777 così do i permessi 
+di scritturqa dentro alla cartella.
+nel pomeriggio ho visto se si possono inserire più immagini 
+
+24/02/2023
+Sto facendo delle modifiche al codice di ieri ho aggiunto che tipo di file vengono accettate
+come png, jpeg, gif, svg, il controllo di quanto è grande il file, se esiste un nome uguale e
+la funzione di generare dei nomi randomici all'immagine per non avere nomi uguali.
+ora provo a fare la pagina di visualizzazione  delle aziende per la proposta e poi la possibilità di inserire più immagini
