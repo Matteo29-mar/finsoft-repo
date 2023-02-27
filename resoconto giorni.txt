@@ -99,3 +99,8 @@ Sto facendo delle modifiche al codice di ieri ho aggiunto che tipo di file vengo
 come png, jpeg, gif, svg, il controllo di quanto è grande il file, se esiste un nome uguale e
 la funzione di generare dei nomi randomici all'immagine per non avere nomi uguali.
 ora provo a fare la pagina di visualizzazione  delle aziende per la proposta e poi la possibilità di inserire più immagini
+
+27/02/2023
+questo giorno affronto symfony per l'invio delle email, i file che servono solo è installare il composer tramite php e sul sito symfony,
+composer require symfony/mailer, con questa riga ti installa il mailer nella cartella che vuoi e grazie all'aiuto di un tutor mi ha fornito il file 
+config_test.php per l'invio delle email e funziona in modo manuale devo ovviamente implementare il tutto ma l'installazione è completata.

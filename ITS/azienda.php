@@ -48,7 +48,7 @@
                     <td>" . $row["telefono"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>" . $row["titolo"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>" . $row["descrizione"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td><img src=\"uploads/" . $row["nome_immagine"] . "\" alt=\"Immagine\" height=\"50\" width=\"50\"></td>
+                    <td><img src=\"uploads/" . $row["nome_immagine"] . "\" alt=\"Immagine\" height=\"100\" width=\"100\"></td>
                     <td>" . $row["data"] . "&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 </tr>";
 

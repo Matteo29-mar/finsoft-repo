@@ -60,6 +60,28 @@ if (move_uploaded_file($image_file["tmp_name"], $target_file)) {
 } else {
   echo "Si è verificato un errore durante il caricamento dell'immagine.";
 }
+require_once "mailer/mailer.php";
+
+// Query per recuperare gli indirizzi email delle aziende dal database
+$sql = "SELECT email FROM aziende";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Ciclo su ogni riga di risultati
+    while($row = $result->fetch_assoc()) {
+        // Invio dell'email di prova
+        $email = $row["email"];
+        $x = file_get_contents("index.html");
+        
+        send_mail($email, "ciao", $x);
+    }
+} else {
+    echo "Nessun risultato trovato.";
+}
+
+
+
+
 
 // Chiudi la connessione al database
 mysqli_close($conn);
