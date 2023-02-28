@@ -63,19 +63,26 @@ if (move_uploaded_file($image_file["tmp_name"], $target_file)) {
 require_once "mailer/mailer.php";
 
 // Query per recuperare gli indirizzi email delle aziende dal database
+require_once "mailer/mailer.php";
+
+// Query per recuperare gli indirizzi email delle aziende dal database
 $sql = "SELECT email FROM aziende";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Ciclo su ogni riga di risultati
-    while($row = $result->fetch_assoc()) {
-        // Invio dell'email di prova
-        $email = $row["email"];
-        $x = file_get_contents("index.html");
-        
-        send_mail($email, "ciao", $x);
-    }
-} else {
+// Ciclo su ogni riga di risultati
+while($row = $result->fetch_assoc()) {
+// Recupera il titolo e la descrizione dalla tabella 'privati' basandosi su un identificatore univoco come l'email
+$email = $row["email"];
+$sql_privati = "SELECT titolo, descrizione FROM privati ";
+$result_privati = $conn->query($sql_privati);
+$row_privati = $result_privati->fetch_assoc();
+$titolo = $row_privati["titolo"];
+$descrizione = $row_privati["descrizione"];
+    // Invio dell'email contenente il titolo e la descrizione
+    $message = "Titolo: " . $titolo . "\nDescrizione: " . $descrizione;
+    send_mail($email, "Nuovo messaggio dall'azienda", $message);
+    } }else {
     echo "Nessun risultato trovato.";
 }
 

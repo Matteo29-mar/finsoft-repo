@@ -8,7 +8,7 @@ DEFINE('LOCALENV', true);
 DEFINE('SALT', 'qdm6hcawn0iktrzl9soy27pg1exj843bvf5u');
 
 DEFINE('MAILER_DEFAULT_FROM_EMAIL', 'postmaster@molto.cloud');
-DEFINE('MAILER_DEFAULT_FROM_USER',  'pippo');
+DEFINE('MAILER_DEFAULT_FROM_USER',  '');
 define('MAILER_DSN',                'smtp://postmaster@molto.cloud:PieroDellaFrancesca1983!@smtps.aruba.it:465/?encryption=ssl&auth_mode=login');
 
 if (LOCALENV) {
