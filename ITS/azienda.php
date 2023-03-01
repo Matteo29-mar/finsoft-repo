@@ -32,7 +32,7 @@
 
             // Verifica della connessione
             if (!$connessione) {
-                die("Connessione fallita: " . mysqli_error());
+                die("Connessione fallita: " . mysqli_connect_error());
                 header("location: index.html");
             }
 
