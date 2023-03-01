@@ -2,6 +2,7 @@
 
 DEFINE('APP_VERSION', '0.0.1');
 
+
 DEFINE('DEBUG',    true);
 DEFINE('LOCALENV', true);
 

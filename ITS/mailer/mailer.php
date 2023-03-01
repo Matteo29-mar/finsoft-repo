@@ -6,7 +6,7 @@ use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Address;
-
+ 
 function send_mail($to, $subject, $body, $from_email = MAILER_DEFAULT_FROM_EMAIL, $from_user = MAILER_DEFAULT_FROM_USER, $files = NULL)
 {
     try {

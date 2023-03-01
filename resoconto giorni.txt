@@ -187,4 +187,7 @@ abbiamo lasciato index di primo arrivo poi abbiamo disegnato in questo modo
 
 successivamente ho sistemato i vari file css, rinominato dei file e creato de i file per far combaciare quasi il tutto, il resto l'ho lasciato ai altri 
 membri del gruppo gli ultimi ritocchi.
-adesso ritorno al back-end dell'invio delle email
+adesso ritorno al back-end dell'invio delle email, ma preden solo la prima
+
+1/3/2023
+come prima cosa ho stamattina, ho risolto l'invio dell'email.
