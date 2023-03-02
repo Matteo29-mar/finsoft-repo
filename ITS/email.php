@@ -20,12 +20,18 @@ if ($result->num_rows > 0) {
   per recuperare tutte le righe di una query 
   e un array associativo contentente tutti i record*/
   // Ciclo su ogni riga di risultati della query per recuperare gli indirizzi email delle aziende
+  while($row = $result->fetch_assoc()) {
+    // Recupera l'email dell'azienda corrente
+        $email = $row["email"];
         $template = file_get_contents("recover.html");
         $search = ["{{NAME}}","{{RESET_URL}}"];
         $replace =["azienda",HTTP_BASEURL. "ITS/azienda.php"];
         $body =str_replace($search, $replace, $template);
         send_mail($email, "Nuovo messaggio dall'azienda",  $body);
-} 
+  }
+} else {
+  echo "Nessun risultato trovato.";
+}
 // Chiudi la connessione al database
 mysqli_close($conn);
 ?>

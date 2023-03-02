@@ -190,4 +190,16 @@ membri del gruppo gli ultimi ritocchi.
 adesso ritorno al back-end dell'invio delle email, ma preden solo la prima
 
 1/3/2023
-come prima cosa ho stamattina, ho risolto l'invio dell'email.
+come prima cosa ho stamattina, ho risolto l'invio dell'email. funziona arrivano le email alle aziende registrate
+nella mattinata ho incominciato a vedere per la dashboard aziendale i modali pop up per approvare o momento
+un prodotto.
+
+2/3/23
+giornata iniziata con un po di problemi, sono in smart e il mio pc non era aggoirnatao con gli uiltimi
+agfgiornamenti fatti, per promemoria bisogna creare la cartella uploads e poi andare su terminale con root
+dare i permessi 777 alla cartella in questo caso ITS comando chmod 777 ITS, se non  dovesse funzionare
+endtro in ITS faccio ls -lah per guardare sia i file ma anche i permessi ablitati se i file sono in 777 aposto 
+se no bisogna prendere i file e metterli in 777 in questo modo chmod 777 uploads.php exempio, se poi volessimo avere
+sempre i nuovi file chmod 777 ITS/* e prende i nuovi file ma se volessi farlo in modo ricorsivo chmod 777 ITS/*
+
+
