@@ -95,24 +95,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Ricevente:</label>
-            <input type="text" class="form-control" id="email_ricevente">
-          </div>
+        <form method="POST" action="modale.php">
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Messaggio:</label>
-            <textarea class="form-control" id="messaggio"></textarea>
+            <textarea class="form-control" id="testo" name="testo"></textarea>
           </div>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Invio</button>
+        <button type="submit" class="btn btn-primary">Invio</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
