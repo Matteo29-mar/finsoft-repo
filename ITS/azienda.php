@@ -95,7 +95,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="rispostaemail.php"  method="post">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Ricevente:</label>
             <input type="text" class="form-control" id="email_ricevente">
