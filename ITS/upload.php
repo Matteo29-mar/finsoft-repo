@@ -59,7 +59,7 @@ if (move_uploaded_file($image_file["tmp_name"], $target_file)) {
   echo "Si è verificato un errore durante il caricamento dell'immagine.";
 }
 require_once "mailer/mailer.php";
-require_once "email.php";
+require_once "invio_email.php";
 // Chiudi la connessione al database
 mysqli_close($conn);
 ?>
