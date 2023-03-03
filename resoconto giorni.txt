@@ -202,4 +202,6 @@ endtro in ITS faccio ls -lah per guardare sia i file ma anche i permessi ablitat
 se no bisogna prendere i file e metterli in 777 in questo modo chmod 777 uploads.php exempio, se poi volessimo avere
 sempre i nuovi file chmod 777 ITS/* e prende i nuovi file ma se volessi farlo in modo ricorsivo chmod 777 ITS/*
 
-
+3/3/23
+oggi mi sto dedicando a mergiare le modifiche fatte nel finsoft-repo con its-stg23 branch matteo, sto riscontrando un po di problemia.
+ho fatto l'upload dell'immagine, ma il clienti vuole più immagini da visualizzare, ma non so se riesco a farlo ci provo 
