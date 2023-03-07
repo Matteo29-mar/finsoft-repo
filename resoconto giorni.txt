@@ -204,4 +204,19 @@ sempre i nuovi file chmod 777 ITS/* e prende i nuovi file ma se volessi farlo in
 
 3/3/23
 oggi mi sto dedicando a mergiare le modifiche fatte nel finsoft-repo con its-stg23 branch matteo, sto riscontrando un po di problemia.
-ho fatto l'upload dell'immagine, ma il clienti vuole più immagini da visualizzare, ma non so se riesco a farlo ci provo 
+ho fatto l'upload dell'immagine, ma il clienti vuole più immagini da visualizzare, ma non so se riesco a farlo ci provo.
+alla fine ho mergiato tutto e funziona
+
+6/3/23
+lunedì mattina, disastro perchè git hub non mi fa pullare le modifiche, poi ho scoperto che era un probelam della chiave privata.
+risolto questo scorpo che ho fatto questo errore, ho dato gli accesso 777 all'utente normale facendo avere gli stessi privilegi del root
+mettendolo allo stesso livello suo, ma non potendo più accedere al root. in sostenza ho divuto resettare da zero il pc perdendo tutta la giornata.
+
+7/2/23
+oggi dvo assolutamente fare la roba che riesco a prendere più immagini dal form
+
+$sql = "INSERT INTO privati (nome, cognome, email, telefono) VALUES ('$nome', '$cognome', '$email', '$telefono')";
+  $sql2 = "INSERT INTO prodotti (titolo, descrizione, immagini, data_creazione) VALUES ('$titolo', '$descrizione', '$folder_name', '$data')";
+  if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2))
+
+
