@@ -212,11 +212,19 @@ lunedì mattina, disastro perchè git hub non mi fa pullare le modifiche, poi ho
 risolto questo scorpo che ho fatto questo errore, ho dato gli accesso 777 all'utente normale facendo avere gli stessi privilegi del root
 mettendolo allo stesso livello suo, ma non potendo più accedere al root. in sostenza ho divuto resettare da zero il pc perdendo tutta la giornata.
 
-7/2/23
-oggi dvo assolutamente fare la roba che riesco a prendere più immagini dal form
+7/3/23
+oggi devo assolutamente fare la roba che riesco a prendere più immagini dal form.
+Questo problema è stato risolto posso caricare più immagini contemporenamente adesso mergio tutto con il master
 
-$sql = "INSERT INTO privati (nome, cognome, email, telefono) VALUES ('$nome', '$cognome', '$email', '$telefono')";
-  $sql2 = "INSERT INTO prodotti (titolo, descrizione, immagini, data_creazione) VALUES ('$titolo', '$descrizione', '$folder_name', '$data')";
-  if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2))
-
+8/3/23
+abbiamo passato la giornata a sistemare il carosello delle proposte dal lato azienda e sistamato il layout della dashboard_azienda, chi siamo, index e servizio
+finito questo mi sono dedicato a portare tutto su master, dato che sta mattina c'erano stati dei problemi con delle versioni, in sostanza un nostro collega ieri ha
+fatto delle modifiche ed ha pushato direttamente su main dimenticandosi di  pullare da main le modifiche fatte quindi ha sovvrascritto le modifiche che c'erano
+con le sue, quindi distruggendo il carosello e la grandezza delle immagini. La soluzione è stata quella di prendere una vecchia versione del codice di quando il carosello
+funzionava e inserirlo come nuova cartella azienda nel progetto, dava appunto due cambiamenti abbiamo adattatto il tutto e poi ho mergiato, adesso funziona tutto.
+Quello che funziona é: registrazione dell'azienda e accesso ed controllato che tu faccia almeno una registrazione e poi un login per accedere all'area, poi è implementato 
+la sezione dashboard facendo vedere le proposte con il carosello, lato privato è stato implementato il form di caricamento dati e immagini nel server web e salvataggio nel db
+si posso salvare o uno o più immagini e si sta procedendo alla vista dell'admin. Tutto questo viene visto nel db.
+Mancano come funzionalità: vedere le immagini caricate nel carosello, invio email da privato ad azienda e il contrario, vista tutto admin e spostamento proposte ignorate
+dalla azienda in una tabella proposte elimiante per eliminare solo di quell'azienda 
 
