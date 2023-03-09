@@ -226,5 +226,13 @@ Quello che funziona é: registrazione dell'azienda e accesso ed controllato che 
 la sezione dashboard facendo vedere le proposte con il carosello, lato privato è stato implementato il form di caricamento dati e immagini nel server web e salvataggio nel db
 si posso salvare o uno o più immagini e si sta procedendo alla vista dell'admin. Tutto questo viene visto nel db.
 Mancano come funzionalità: vedere le immagini caricate nel carosello, invio email da privato ad azienda e il contrario, vista tutto admin e spostamento proposte ignorate
-dalla azienda in una tabella proposte elimiante per eliminare solo di quell'azienda 
+dalla azienda in una tabella proposte elimiante per eliminare solo di quell'azienda.
+
+9/3/23
+giorno di samrrt, oggi non mi sono dedicato al codice ma alla ricerca di come potessi integrare la web app in cloud,
+penso di hostarel'applicazioni in un server virtuale di aws per essere sempre on line ovviamente ci sarebbe bisogno
+di mantenerla e poi ho controllato l'uso di un server smtp per l'invio delle email con aws ed ho trovato ses,
+il servizio di aws per imnviare email, ho già visionato delle documentazionje per farlo. 
+Infine ho guardato dei corsi per cloud per milgiorare delle skill per rendere meglio a lavoro
+
 
