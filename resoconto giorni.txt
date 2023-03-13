@@ -229,10 +229,24 @@ Mancano come funzionalità: vedere le immagini caricate nel carosello, invio ema
 dalla azienda in una tabella proposte elimiante per eliminare solo di quell'azienda.
 
 9/3/23
-giorno di samrrt, oggi non mi sono dedicato al codice ma alla ricerca di come potessi integrare la web app in cloud,
+giorno di smart, oggi non mi sono dedicato al codice ma alla ricerca di come potessi integrare la web app in cloud,
 penso di hostarel'applicazioni in un server virtuale di aws per essere sempre on line ovviamente ci sarebbe bisogno
 di mantenerla e poi ho controllato l'uso di un server smtp per l'invio delle email con aws ed ho trovato ses,
 il servizio di aws per imnviare email, ho già visionato delle documentazionje per farlo. 
 Infine ho guardato dei corsi per cloud per milgiorare delle skill per rendere meglio a lavoro
+
+10/3/23
+Venerdì, mi sto dedicando alla visione delle immagini nel carosello, sto riscontrando dei problemmi.
+Nel pomeriggio sono andato avanti mettendo questa porzione di codice per creare le immagini numerate all'interno dellas cartella 
+for ($i = 0; $i <= count($image_file["name"]); $i++) {
+    $file_extension = strtolower(pathinfo($image_file["name"][$i], PATHINFO_EXTENSION));
+    $new_filename = uniqid() . '_' . $image_file["name"][$i];
+    $target_file = $target_dir . $i+1 . ".$file_extension";
+}
+
+funziona in parte
+
+13/3/23
+Oggi mi devo dedicare a finire le robe di venerdì
 
 
