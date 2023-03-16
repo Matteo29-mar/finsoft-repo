@@ -247,6 +247,132 @@ for ($i = 0; $i <= count($image_file["name"]); $i++) {
 funziona in parte
 
 13/3/23
-Oggi mi devo dedicare a finire le robe di venerdì
+Oggi mi devo dedicare a finire le robe di venerdì, sono ruuscito a caricare le immagini nella card generata in modo automatico in base a quanti 
+prodotti ci sono nel database per fare ciò ho dovuto fare una api in php prendendo i file chiamati barra.php, dashboard_azienda.php e carosello.php
+        <img class=\"postcard__img\" src=\"$img\" alt=\"Img\" id_prodotto=\"$id_prodotto\" onclick=\"riempiInput(event)\" />
+-barra.php   <img class=\"postcard__img\" src=\"$img\" alt=\"Img\" id_prodotto=\"$id_prodotto\" onclick=\"riempiInput(event)\" />
+    in questa riga dobbiamo prendere la parte id_prodotto per prendere l'id.
+-dashboard_azienda.php       <script>
+                        function riempiInput(event) {
+                            var bottone = event.currentTarget;
+                            var id_prodotto = bottone.getAttribute('id_prodotto');
 
+                            let data = new FormData();
+                            data.append('id_prodotto', id_prodotto);
+
+                            fetch('../../controller/carosello.php', {
+                                    method: "POST",
+                                    body: data
+                                })
+
+                                .then(data => {
+                                    console.log(data)
+                                    if (data.status !== 200) {
+                                        alert('Qualcosa è andato storto...');
+                                        throw new Error(`Error ${data.status}`);
+                                    }
+                                    data.json().then(data => {
+                                        let indicators = document.getElementById("tab_indicators")
+                                        let tab = document.getElementById("tab_inner")
+                                        indicators.innerHTML = data.indicators
+                                        tab.innerHTML = data.inner
+                                    })
+                                })
+                                .catch(err => {
+                                    console.error(err)
+                                })
+                        }
+
+                        var bottoni = document.querySelectorAll('[id_prodotto]');
+                        bottoni.forEach(function(bottone) {
+                            bottone.addEventListener('click', riempiInput);
+                        });
+                    </script>
+in questa api che non è rest full prendo id da barra.php poi mando tutto a carosello.php per fare lo scandir  della cartella e vsionare le immagini.
+a fine giornata sono con le immagini che si aprono in tutte le card, ci penserò domani.
+
+14/03/23
+Obbiettivo è quello di visionare le immagini rispettive al carosello per farlo ho dovuto implementare delle parti di codice nel carosello,php e dashboard_azienda.php 
+-carosello.php
+    <?php
+// connessione al database
+$conn = mysqli_connect("10.9.1.218", "ITS-STG2023", "ITS-STG2023", "ITSSTG2023");
+// Verifica la connessione
+if (!$conn) {
+    die("Connessione al database fallita: " . mysqli_connect_error());
+}
+if (isset($_REQUEST['id_prodotto'])) {
+    // ottenere il nome della cartella delle immagini dal database
+    $sql = "SELECT immagini FROM prodotti WHERE id_prodotto = " . $_REQUEST['id_prodotto'];
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $image_folder = $row['immagini'];
+    } else {
+        echo json_encode("Nessun prodotto trovato con questo ID.");
+        exit;
+    }
+    // ottenere un array di tutti i nomi dei file di immagine nella cartella
+    $image_files = glob("../immagini/uploads/$image_folder/*");
+    // è una stringa vuota per creare il markup HTML per il carosello di immagini , sono i componenti del carosello 
+    $indicators ="";
+    $inner = "";
+    //$index = indice corrente $image_file il valore di ogni elemento dell'array  durante il for
+    //questo foreach serve per creare un div con la class... e un 'immagine all'interno scorrendo l'array
+    foreach ($image_files as $index => $image_file) {
+        if($index == 0){
+            
+            $indicators.= '<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="'.$index.'" class="active" aria-current="true" aria-label="Slide '.($index+1).'"></button>';
+            $inner.='<div class="carousel-item active"><img src="../'.$image_file.'" class="d-block w-100" alt="..."></div>';
+        }else{
+            
+            $indicators.='<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="'.$index.'" aria-label="Slide '.($index+1).'"></button>';
+            $inner.='<div class="carousel-item "><img src="../'.$image_file.'" class="d-block w-100" alt="..."></div>';
+        }
+      
+    }
+
+    mysqli_close($conn);
+    echo json_encode(['inner' => $inner, 'image' => $image_files , "indicators"=>$indicators]);
+} else {
+    echo json_encode("Nessun prodotto trovato");
+}
+?> 
+prima c'è la solita parte di connesione al db e query, poi faccio lo scandir della cartella, ma la parte nuova è quando entro nel foreach perchè 
+se indice è == 0 nel if innietta nel html un tipo di immagine active se è falso tutte le altre no, active per dirlgi redi attivo quel tipo di immmagine.
+poi per portare tutto alla api gli mando in json  a dashboard_azienda.php  echo json_encode(['inner' => $inner, 'image' => $image_files , "indicators"=>$indicators]);
+
+in dashboard per visionare il carosello ho messo questo html 
+<div class="modal-body">
+                    <!-- Carosello di immagini -->
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators" id="tab_indicators">
+                        </div>
+                        <div class="carousel-inner">
+                            <span id="tab_inner"></span>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+tab_indicators e tab_inner sono i due id che servono per tutto sia alla api infatti vengono dichiarati li e poi nei dashboard_azienda e carosello
+funziona tutto le immagini rispettive nei caroselli 
+
+15/03/23
+mercoledì mi sono dedicato di come hostare la web app su aws, ho creato la vpc per accedere alla macchina facendo le regle di routing 80 e 22, successivamente ho 
+creato una istanza ec2 con un debian da 1 gb di ram e 1vcpu per un 30 gb di spazio, avrei voluto attacarci bucket s3 per attacarci i file come css, js ...
+una volta creata però non potuto procedere perchè mi trovo dentro una vpn e dovrei da quello che ho capito modificare dei sttaggi della vpn dell'azienda e poi 
+perchè domani dovremmo fare un  colloquio con un'altra deivisione dell'azienda di cloud, non so ch aspettarmi, quindi domani niente smart vado a Torino.
+
+16/3/23
+Oggi siamo a Torino per  fare il colloquio con quelli del'altra divione dell'azienda, nel frattempo vado avanti con la web app. Mi sono assegnato una nuova issue 
+nel progetto mi dedicaherò delle email e invio email da parte del form all'azienda e viceversa.
 

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="../index.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../view/login_register/login_register.css">
+    <link rel="stylesheet" type="text/css" href="../../view/nav_footer.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-logo">
+            <a href="../../index.php">
+                <img src="../../immagini/img_sito/logo_progetto.png" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="../servizio/servizio.html">SERVIZIO</a></li>
+                <li><a href="#">CHI SIAMO</a></li>
+            </ul>
+        </div>
+        <div class="navbar-user">
+            <div class="dropdown">
+                <button class="dropdown-btn"><img src="../../immagini/img_sito/user_icon.png" alt="User Icon"></button>
+                <div class="dropdown-wrapper">
+                    <div class="dropdown-content">
+                        <a href="#">Profilo</a>
+                        <a href="../../controller/log-out.php">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="../../controller/register.php" method="post">
+                <h1>Crea un Account</h1>
+                <input type="text" placeholder="Ragione Sociale" name="ragione_sociale" id="ragione_sociale" required>
+                <input type="text" placeholder="Partita Iva" name="piva" id="piva" required>
+                <input type="text" placeholder="Codice Fiscale" name="codice_fiscale" id="codice_fiscale" required>
+                <input type="text" placeholder="Nome" name="nome" id="nome" required>
+                <input type="text" placeholder="Cognome" name="cognome" id="cognome" required>
+                <input type="text" placeholder="Telefono" name="telefono" id="telefono" required>
+                <input type="mail" placeholder="Email" name="mail" id="mail" required>
+                <input type="text" placeholder="Indirizzo Azienda" name="indirizzo_azienda" id="indirizzo_azienda"
+                    required>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <button type="submit">Registrati</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="../../controller/login.php" method="post">
+                <h1>Accedi</h1>
+                <input type="email" placeholder="Email" name="mail" id="mail" required />
+                <input type="password" placeholder="Password" name="password" id="password" required />
+                <a href="../../dashboard/aziende/recuperoPassword.html">Password dimenticata?</a>
+                <button type="submit">Accedi</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bentornato!</h1>
+                    <p>Per rimanere in contatto con noi, accedi con le tue
+                        informazioni personali</p>
+                    <button class="ghost" id="signIn">Accedi</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Benvenuto!</h1>
+                    <p>Inserisci i tuoi dati personali e inizia il viaggio con noi</p>
+                    <button class="ghost" id="signUp">Registrati</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+
+</HTML>
