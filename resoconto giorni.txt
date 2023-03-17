@@ -416,4 +416,5 @@ Continuando con il progetto ho fatto questo per l'upload
 Nella gioranta di oggi ci stiamo dedicando a sistemare alcune cose inerenti a grafica varia, poi ho assistito un mio collega per fare la parte di eliminazione logica del
 prodotto quando un'azienda clicca sul tasto elimina.
 io mi sto cercando di ultimare la parte di gestione delle email e di integrare qualcosa di sicurezza informatica per prevenire degli attacchi.
+la parte di sql injection è stata finita adesso la web app è protetta da questo lato qui devo finire però il lato email e mmagari altre cose di sicurezza informatica
 
