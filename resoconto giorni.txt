@@ -100,6 +100,7 @@ come png, jpeg, gif, svg, il controllo di quanto è grande il file, se esiste un
 la funzione di generare dei nomi randomici all'immagine per non avere nomi uguali.
 ora provo a fare la pagina di visualizzazione  delle aziende per la proposta e poi la possibilità di inserire più immagini
 
+
 27/02/2023
 questo giorno affronto symfony per l'invio delle email, i file che servono solo è installare il composer tramite php e sul sito symfony,
 composer require symfony/mailer, con questa riga ti installa il mailer nella cartella che vuoi e grazie all'aiuto di un tutor mi ha fornito il file 
@@ -375,4 +376,44 @@ perchè domani dovremmo fare un  colloquio con un'altra deivisione dell'azienda 
 16/3/23
 Oggi siamo a Torino per  fare il colloquio con quelli del'altra divione dell'azienda, nel frattempo vado avanti con la web app. Mi sono assegnato una nuova issue 
 nel progetto mi dedicaherò delle email e invio email da parte del form all'azienda e viceversa.
+Ci hanno parlato quelli del repartyo cloud, una volta terminato questo progetto ovvero il 31 Marzo verremo assegnati a questo progetto per volskvagen in pratica vogliono
+traferire il loro complesso di servizi da un mainframe e farlo su aws un progetto tanto enorme quanto stimolante.
+Continuando con il progetto ho fatto questo per l'upload
+/* Inserimento dati database, inzio con iserimento di privati poi dopo aver fatto if che controlla che la connesione è andata con successo 
+  dopo qello fa crea la variabile $id_privato e la prende con la funzione mysqli_insert_id dopo fa la seconda query $sql2 e fa la stessa cosa della prima
+  dopo aver fatto l'inserimento faccio update della tabella privati e aggiungo $id_prodotto nella colonna della tabella poi chiudo tutto*/
+  $sql = "INSERT INTO privati (nome, cognome, email, telefono) VALUES ('$nome', '$cognome', '$email', '$telefono')";
+  if ($conn->query($sql) === TRUE) {
+    // Ottieni l'id generato automaticamente per il nuovo record
+    $id_privato = mysqli_insert_id($conn);
+  } else {
+    echo "Si è verificato un errore durante il salvataggio delle informazioni relative all'immagine nel database: " . mysqli_error($conn);
+    header("location:../index.php");
+  }
+  $sql2 = "INSERT INTO prodotti (titolo, descrizione, immagini, data_creazione, id_privato) VALUES ('$titolo', '$descrizione', '$folder_name', '$data', '$id_privato')";
+  if ($conn->query($sql2) === TRUE) {
+    // Ottieni l'id generato automaticamente per il nuovo record nella tabella prodotti
+    $id_prodotto = mysqli_insert_id($conn);
+
+    // Aggiornamento della tabella privati con l'id del prodotto
+    $update_sql = "UPDATE privati SET id_prodotto='$id_prodotto' WHERE id_privato='$id_privato'";
+    if ($conn->query($update_sql) === TRUE) {
+      echo "Le informazioni relative all'immagine sono state salvate nel database.";
+      header("location:../index.php");
+      
+      require_once "invio_email.php";
+    } else {
+      echo "Si è verificato un errore durante il salvataggio delle informazioni relative all'immagine nel database: " . mysqli_error($conn);
+      header("location:../index.php");
+    }
+  } else {
+    header("location:../index.php");
+  }
+
+
+
+17/3/23
+Nella gioranta di oggi ci stiamo dedicando a sistemare alcune cose inerenti a grafica varia, poi ho assistito un mio collega per fare la parte di eliminazione logica del
+prodotto quando un'azienda clicca sul tasto elimina.
+io mi sto cercando di ultimare la parte di gestione delle email e di integrare qualcosa di sicurezza informatica per prevenire degli attacchi.
 

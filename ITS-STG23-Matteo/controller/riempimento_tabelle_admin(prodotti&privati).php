@@ -23,7 +23,7 @@
         <td>' .$row['immagini'] .'</td>
         <td>' .$row['data_creazione'] .'</td>
         <td></td>
-        <td><a href="elimina_riga?id=<?php echo $row->id;?>" class="bottone-elimina" onclick="eliminaRecord()"><i class="fa-sharp fa-solid fa-xmark"></i></a></td> 
+        <td><a href="elimina_riga?id=<?php echo $row->id;?>" class="bottone-elimina"><i class="fa-sharp fa-solid fa-xmark"></i></a></td> 
         </tr>
         ';     
 

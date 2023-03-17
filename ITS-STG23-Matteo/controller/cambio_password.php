@@ -8,7 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST["new_password"];
     $confirm_password = $_POST["confirm_password"];
 
-    require_once("config_connessione_db.php");
+    // Connessione al database MySQL
+    $servername = "localhost";
+    $username = "finsoft";
+    $password = "finsoft";
+    $dbname = "finsoft";
+    
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
     // Verifica se la nuova password e la conferma sono uguali
     if ($new_password != $confirm_password) {

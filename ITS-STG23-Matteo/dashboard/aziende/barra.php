@@ -1,6 +1,9 @@
 <?php
-require_once "../../controller/config_connessione_db.php";
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
 
+require_once "../../controller/config_connessione_db.php";
 
 // Imposta l'ordine di visualizzazione dei prodotti
 $ordine = "data_creazione DESC"; // Default: dal più recente al meno recente
@@ -10,19 +13,23 @@ if (isset($_GET["ordine"])) {
   }
 }
 
+
 // Query per recuperare i dati dei prodotti
-$query = "SELECT * FROM prodotti ORDER BY $ordine";
+$query = "SELECT * FROM prodotti WHERE id_prodotto NOT IN (SELECT id_prodotto FROM proposte_eliminate WHERE id_azienda = '$_SESSION[id_azienda]') ORDER BY $ordine";
 $result = mysqli_query($conn, $query);
 
 // Recupera l'id_prodotto e la data di pubblicazione dal risultato della query
 $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $datiProdotti = array();
 echo ("
-<div class=\"vecchio_nuovo\">
+<div class=\"vecchio_nuovo\" style=\"
+padding-bottom: 15px;\">
+
   <p>Orina per</p>
-  <button onclick=\"mostraProdotti('nuovi')\">Più recenti</button>
-  <button onclick=\"mostraProdotti('vecchi')\">Meno recenti</button>
+  <button type=button class=\"btn btn-primary btn-sm\" onclick=\"mostraProdotti('nuovi')\">Più recenti</button>
+  <button type=button class=\"btn btn-primary btn-sm\" onclick=\"mostraProdotti('vecchi')\">Meno recenti</button>
 </div>");
+
 for ($i = 0; $i < count($row); $i++) {
   $id_prodotto = $row[$i]['id_prodotto'];
   $data_creazione = date('Y-m-d', strtotime($row[$i]['data_creazione']));
@@ -32,9 +39,9 @@ for ($i = 0; $i < count($row); $i++) {
   $datiProdotti[$i] = array(
     'data_creazione' => $data_creazione,
     'bar_id' => "bar-$id_prodotto",
-    'id_prodotto' => $id_prodotto
+    'id_prodotto' => $id_prodotto,
   );
-
+//questa funzione fa lo scandir in base all'indice per avere l'immagine di vista del prodotto
 $scandir = glob("../../immagini/uploads/" .$row[$i]['immagini']."/*");
 foreach ($scandir as $index => $image_file) {
 $img = $image_file;
@@ -69,15 +76,70 @@ break;
         <span>DESCRIZIONE:</span>
         <div class=\"postcard__preview-txt\">$descrizione</div>
         <ul class=\"postcard__tagbox\">
-          <li class=\"tag__item play green\">
-            <a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalProposta\" id_prodotto=\"$id_prodotto\" onclick=\"riempiInput()\">Fai una proposta</a></li>
-          <li class=\"tag__item play red\"><a href=\"#\">Elimina</a></li>
+          <button class=\"tag__item btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalProposta\" id_prodotto=\"$id_prodotto\" onclick=\"riempiInput()\">
+             Fai una proposta</button>
+          <button class=\"tag__item btn btn-danger\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalElimina\" id_prodotto=\"$id_prodotto\" id=\"bottone_esterno\" >Elimina</button>
         </ul>
       </div>
     </article>"
   );
 }
 ?>
+<!-- Modal Elimina -->
+<div class="modal fade" id="ModalElimina" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form action="../../controller/elimina_prodotto.php" method="post">
+        <div class="modal-header">
+          <input type="" id="input_elimina" name="id_prodotto" value=""></input>
+          <script>
+            var id_prodotto;
+
+            function riempiElimina(event) {
+              console.log({
+                t: this
+              });
+              console.log({
+                event
+              });
+              var input = document.getElementById('input_elimina');
+              var bottone1 = event.target;
+              console.log({
+                bottone1
+              });
+              var bottone = event.currentTarget;
+              console.log({
+                bottone
+              });
+
+              id_prodotto = bottone.getAttribute('id_prodotto'); // assegnazione valore variabile globale
+              console.log(id_prodotto);
+              input.value = id_prodotto;
+            }
+
+            var bottoni = document.querySelectorAll('[id_prodotto]');
+            bottoni.forEach(function(bottone) {
+              bottone.addEventListener('click', riempiElimina);
+            });
+
+            function EliminaProdotto() {
+              var input = document.getElementById("input_elimina");
+              input.value = id_prodotto; // aggiornamento valore input con variabile globale
+            }
+          </script>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title">Sei sicuro di voler eliminare questo annuncio?</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal" id="elimina_button" onclick="EliminaProdotto()">Elimina</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script>
   function animateProgressBar(dataCreazione, barId, id) {
@@ -120,6 +182,11 @@ break;
     xhr.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("elencoProdotti").innerHTML = this.responseText;
+
+        var bottoni = document.querySelectorAll('[id_prodotto]');
+        bottoni.forEach(function(bottone) {
+          bottone.addEventListener('click', riempiElimina);
+        });
       }
     };
     xhr.open("GET", "./barra.php?ordine=" + ordine, true);

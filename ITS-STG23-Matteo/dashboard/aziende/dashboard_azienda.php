@@ -11,7 +11,7 @@ include '../../controller/permessi.php';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>-Dashboard Aziendale-</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="./css/dashboard_azienda.css" rel="stylesheet" />
     <link href="./css/card.css" rel="stylesheet" />
@@ -158,14 +158,13 @@ include '../../controller/permessi.php';
         </div>
     </div>
 
-
     <!-- Modal proposta -->
     <div class="modal fade" id="ModalProposta">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Immetti una cifra in Euro</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="../../controller/money_form.php" method="post">
@@ -174,7 +173,7 @@ include '../../controller/permessi.php';
                             <div class="input-group mb-3">
                                 <input type="hidden" id="prodotto_id" name="prodotto_id" value="">
                                 <script>
-                                    function riempiInput(event) {
+                                    function riempiInput1(event) {
                                         var input = document.getElementById('prodotto_id');
                                         var bottone = event.currentTarget;
 
@@ -184,25 +183,66 @@ include '../../controller/permessi.php';
                                     }
 
                                     var bottoni = document.querySelectorAll('[id_prodotto]');
-                                    bottoni.forEach(function(bottone) {
-                                        bottone.addEventListener('click', riempiInput);
+                                    bottoni.forEach(function (bottone) {
+                                        bottone.addEventListener('click', riempiInput1);
                                     });
                                 </script>
                                 <span class="input-group-text">&euro;</span>
                                 <input type="number" class="form-control" name="proposta_euro" id="proposta_euro" placeholder="0,00" min="0" step="0.1">
                             </div>
                         </div>
-                        <div class="modal-footer contBottoni">
-                            <button type="submit" id="submitButton" onclick="validateSignupForm()" class="btn btn-primary">
-                                <span>Salva</span>
-                            </button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                        </div>
+                </div>
+                <div class="modal-footer contBottoni">
+                    <button type="submit" id="salva_proposta" onclick="validateSignupForm()" class="btn btn-primary">
+                        <span>Salva</span>
+                        <span id="loader"></span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    
+
+    <!-- Modale di avviso successo  -->
+    <div class="modal fade" id="modale_successo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title">La tua proposta ha avuto successo!</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale di avviso fallimento  -->
+    <div class="modal fade" id="modale_fallimento" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title">La tua proposta non è andata a buon fine :(</h3>
+                </div>
+                <div class="modal-footer contBottoni">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposta">
+                        Riprova
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modale immagini-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -284,9 +324,7 @@ include '../../controller/permessi.php';
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-5.3.0.min.js"></script>
-
     <script src="./js/scripts.js"></script>
-    <script src="./js/carosello.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="../aziende/assets/demo/chart-area-demo.js"></script>
     <script src="../aziende/assets/demo/chart-bar-demo.js"></script>
