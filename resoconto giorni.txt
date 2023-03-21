@@ -429,4 +429,6 @@ oggi si inizia con il nuovo progetto, java 17  con spring boot dei microservizi(
  spring data crud no front end, db in locale uguale per tutti
 swagger, docker file e poi la parte di aws con la creazione di cluster  e jpa.
 dealine no, incontro ogni due giorni
+mi sono dedicato a fare il database, uso solo uno perchè non serve avere più database per solo 3 tabelle con dei dati che sono uguali, se fossro di più si
+poi ho installato intelly idea e tutte le configurazioni
 
