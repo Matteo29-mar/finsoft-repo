@@ -418,3 +418,12 @@ prodotto quando un'azienda clicca sul tasto elimina.
 io mi sto cercando di ultimare la parte di gestione delle email e di integrare qualcosa di sicurezza informatica per prevenire degli attacchi.
 la parte di sql injection è stata finita adesso la web app è protetta da questo lato qui devo finire però il lato email e mmagari altre cose di sicurezza informatica
 
+20/3/23
+inizio settimana, inziato con problemi sul server perchè ci hanno spento il db online. quinid abbiamo dovuto portare tutto in locale, menomale che avevo un backup 
+aggiornato a giovedì. Notizia domani ci spostano di progetto per lavorare sul progetto per volskvagen in cloud bene.
+il progetto della web app verrà continuato dal nostro collega è stato fatto quasi tutto lasciamo il progetto ad un 90% del completamento. mancano delle piccolezze
+
+
+21/3/23
+oggi si inizia con il nuovo progetto,
+
