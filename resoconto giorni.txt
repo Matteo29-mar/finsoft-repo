@@ -425,5 +425,8 @@ il progetto della web app verrà continuato dal nostro collega è stato fatto qu
 
 
 21/3/23
-oggi si inizia con il nuovo progetto,
+oggi si inizia con il nuovo progetto, java 17  con spring boot dei microservizi(libreia online),
+ spring data crud no front end, db in locale uguale per tutti
+swagger, docker file e poi la parte di aws con la creazione di cluster  e jpa.
+dealine no, incontro ogni due giorni
 
