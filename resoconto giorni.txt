@@ -420,15 +420,19 @@ la parte di sql injection è stata finita adesso la web app è protetta da quest
 
 20/3/23
 inizio settimana, inziato con problemi sul server perchè ci hanno spento il db online. quinid abbiamo dovuto portare tutto in locale, menomale che avevo un backup 
-aggiornato a giovedì. Notizia domani ci spostano di progetto per lavorare sul progetto per volskvagen in cloud bene.
+aggiornato a giovedì. Notizia domani ci spostano di progetto per lavorare sul progetto per volskvagen in cloud, bene.
 il progetto della web app verrà continuato dal nostro collega è stato fatto quasi tutto lasciamo il progetto ad un 90% del completamento. mancano delle piccolezze
 
 
 21/3/23
-oggi si inizia con il nuovo progetto, java 17  con spring boot dei microservizi(libreia online),
- spring data crud no front end, db in locale uguale per tutti
-swagger, docker file e poi la parte di aws con la creazione di cluster  e jpa.
+oggi si inizia con il nuovo progetto, java 17  con spring boot dei microservizi(bibloteca online),
+springm, data crud no front end, db in locale uguale per tutti, swagger, docker file e poi la parte di aws con la creazione di cluster  e jpa.
 dealine no, incontro ogni due giorni
-mi sono dedicato a fare il database, uso solo uno perchè non serve avere più database per solo 3 tabelle con dei dati che sono uguali, se fossro di più si
-poi ho installato intelly idea e tutte le configurazioni
+mi sono dedicato a fare il database, uso solo uno perchè non serve avere più database per solo 3 tabelle(clienti, prestiti e libri) con dei dati che sono uguali, se fossero di più si
+poi ho installato intelly idea e tutte le configurazioni per questo ide.
+mysql workbench non funziona ho dovuto fare con phpmyadmin.
+ho usato poi spring initrl per creare i servizi per creare il microservizi ho usato come dipendenza( starter web, mysql jbcd, dev tools, data jpa, thymeleaf, lombok)
+
+22/3/23
+la giornata iniziata con la connessione internet non c'è quindi sto aspettando che torni
 
