@@ -6,7 +6,6 @@ public interface Clientiservice {
     //GET(READ)
     Clienti GetId(Long id);
     List<Clienti>GetAllClienti();
-    List<Clienti>GetEmail(String email);
     //POST(CREATE)
     Clienti AddClienti(Clienti NewClienti);
     //PUT(UPDATE)

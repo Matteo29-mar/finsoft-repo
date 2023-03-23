@@ -35,17 +35,6 @@ public class Clientiserviceimpl implements  Clientiservice{
     return clientitutti;
 }
     @Override
-    public List<Clienti> GetEmail(String email) {
-
-        List<Clienti> clientiemail = repo.FindClientiEmail(email);
-        System.out.println(clientiemail);
-        if (!clientiemail.isEmpty()) {
-            return clientiemail;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nessuna email trovata per questo cliente: " + email);
-        }
-    }
-    @Override
     public Clienti AddClienti(Clienti NewClienti) {
         return repo.save(NewClienti);
     }
@@ -55,7 +44,7 @@ public class Clientiserviceimpl implements  Clientiservice{
     }
     @Override
     public boolean DeleteClientiId(Long id) {
-        if( !repo.findById(id).isPresent())
+        if(!repo.findById(id).isPresent())
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nessun id trovato per il cliente: " + id);
         repo.deleteById(id);
         return repo.findById(id).isEmpty();
