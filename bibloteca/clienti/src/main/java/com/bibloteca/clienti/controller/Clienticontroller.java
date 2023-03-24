@@ -77,7 +77,7 @@ public class Clienticontroller {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Id nullo");
 
         }
-        Clienti oldClienti = service.GetId(id_cliente);
+0        Clienti oldClienti = service.GetId(id_cliente);
         if (oldClienti != null) {
             if(UpdateClienti.getNome() != null) oldClienti.setNome(UpdateClienti.getNome());
             if(UpdateClienti.getCognome() != null) oldClienti.setCognome(UpdateClienti.getCognome());
@@ -97,8 +97,10 @@ public class Clienticontroller {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity<String> DeleteClientiId(@PathVariable Long id){
         if (id == null){
+            clientilogger.error("richiesta errore id{}", id);
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
+        clientilogger.trace("richiesta con successo per id {}", id);
         return new ResponseEntity<>(
                 service.DeleteClientiId(id) ? "cliente con id" + id + "è stato elimanto con successo" : "Libro con id" + id + "non è stato eliminato",
                 HttpStatus.NO_CONTENT
