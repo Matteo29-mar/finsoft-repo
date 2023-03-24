@@ -434,8 +434,8 @@ mysql workbench non funziona ho dovuto fare con phpmyadmin.
 ho usato poi spring initrl per creare i servizi per creare il microservizi ho usato come dipendenza( starter web, mysql jbcd, dev tools, data jpa, thymeleaf, lombok)
 
 22/3/23
-la giornata iniziata con la connessione internet non c'è quindi sto aspettando che torni
+la giornata iniziata con la connessione internet non c'è quindi sto aspettando che torni, sto andando lentamente ma ho fatto il spring boot.
 
 23/3/23
-
+con oggi mi sono dedicato alla creazione del microservizio dei clienti
 
