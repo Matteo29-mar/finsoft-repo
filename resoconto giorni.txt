@@ -434,8 +434,15 @@ mysql workbench non funziona ho dovuto fare con phpmyadmin.
 ho usato poi spring initrl per creare i servizi per creare il microservizi ho usato come dipendenza( starter web, mysql jbcd, dev tools, data jpa, thymeleaf, lombok)
 
 22/3/23
-la giornata iniziata con la connessione internet non c'è quindi sto aspettando che torni, sto andando lentamente ma ho fatto il spring boot.
+la giornata iniziata con la connessione internet che non c'è quindi sto aspettando che torni, sto andando lentamente ma ho fatto il spring boot.
 
 23/3/23
-con oggi mi sono dedicato alla creazione del microservizio dei clienti
+con oggi mi sono dedicato alla creazione del microservizio dei clienti, ho concluso il controler, entity ,repository, service e i test.
+sembra andare tuto tranne il test del delete id del cliente. ovviamente tutto senza connessione al db
 
+24/3/23
+oggi c'è stata la prima lezione del project work, abbiamo parlato delle nostre situazioni e di incominciare a  segnarci quello che abbiamo fatto
+nel pomeriggio sono tronato in azienda  e  ho chisto una mano per il test, sembra che stia andando troppo veloce sul da farsi, in realtà non ha tutti i torti dovrei capire meglio 
+quello che sto facendo. mi ha fatto smontare il repository modificare il contorller e mi hanno detto di non fare i test non servono e infine di non fare un microservizio per robe ma
+di fare un unico file spring con clienti, libri e prestiti per risparmiare sul traffico tra un microservizio ed un'altro.
+alla fine non sono riuscito a far andare il main sembra che ci sia un problema con delle porte dovrei sistemarle e modificare il controller 
