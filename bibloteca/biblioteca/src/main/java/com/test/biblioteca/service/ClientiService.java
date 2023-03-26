@@ -1,5 +1,5 @@
-package com.test.biblioteca.service;
-import com.test.biblioteca.entity.Clienti;
+package com.test.biblioteca.Service;
+import com.test.biblioteca.Entity.Clienti;
 import java.util.List;
 public interface ClientiService {
     //GET(READ)

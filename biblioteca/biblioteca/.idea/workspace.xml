@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bbaa150e-4e0b-4800-8e79-349072cee37e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/controller/ClientiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/controller/ClientiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/entity/Clienti.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/entity/Clienti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/repository/ClientiRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/repository/ClientiRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/service/ClientiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/service/ClientiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/service/ClientiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bibloteca/biblioteca/src/main/java/com/test/biblioteca/service/ClientiServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/ClientiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/controller/Clienticontroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/entity/Clienti.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/repository/Clientirepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/service/Clientiservice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/java/com/bibloteca/clienti/service/Clientiserviceimpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/clienti/src/test/java/com/bibloteca/clienti/ClientiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/src/main/java/com/bibloteca/libri/LibriApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/libri/src/test/java/com/bibloteca/libri/LibriApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/src/main/java/com/bibloteca/prestiti/PrestitiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bibloteca/prestiti/src/test/java/com/bibloteca/prestiti/PrestitiApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NYkq3szsUOiTenl1FSnkU1GujF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/matte/Documents/finsoft-repo/finsoft-repo/bibloteca/biblioteca"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbaa150e-4e0b-4800-8e79-349072cee37e" name="Changes" comment="" />
+      <created>1679848591592</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679848591592</updated>
+    </task>
+    <servers />
+  </component>
+</project>

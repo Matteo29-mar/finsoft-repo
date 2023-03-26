@@ -1,7 +1,7 @@
-package com.test.biblioteca.controller;
-import com.test.biblioteca.entity.Clienti;
-import com.test.biblioteca.repository.ClientiRepo;
-import com.test.biblioteca.service.ClientiService;
+package com.test.biblioteca.Controller;
+import com.test.biblioteca.Entity.Clienti;
+import com.test.biblioteca.Repository.ClientiRepo;
+import com.test.biblioteca.Service.ClientiService;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 //@Slf4j
-@RequestMapping("api-r1")
+@RequestMapping("api/r1")
 public class ClientiController {
   //  private Logger clientilogger ;
     private final ClientiService service;
