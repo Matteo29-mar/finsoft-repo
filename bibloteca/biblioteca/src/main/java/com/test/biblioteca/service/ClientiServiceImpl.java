@@ -1,6 +1,6 @@
-package com.test.biblioteca.service;
-import com.test.biblioteca.entity.Clienti;
-import com.test.biblioteca.repository.ClientiRepo;
+package com.test.biblioteca.Service;
+import com.test.biblioteca.Entity.Clienti;
+import com.test.biblioteca.Repository.ClientiRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

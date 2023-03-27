@@ -1,4 +1,4 @@
-package com.test.biblioteca.entity;
+package com.test.biblioteca.Entity;
 import lombok.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;

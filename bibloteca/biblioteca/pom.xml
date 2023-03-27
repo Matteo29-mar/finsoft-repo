@@ -60,6 +60,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.restdocs</groupId>
 			<artifactId>spring-restdocs-mockmvc</artifactId>
@@ -87,10 +88,14 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+=======
+	</dependencies>
+>>>>>>> 7e91c19a605b507e36979a866de4293d26b1a29f
 
 	<build>
 		<plugins>
 			<plugin>
+<<<<<<< HEAD
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
 				<version>2.2.1</version>
@@ -116,6 +121,8 @@
 				</dependencies>
 			</plugin>
 			<plugin>
+=======
+>>>>>>> 7e91c19a605b507e36979a866de4293d26b1a29f
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
