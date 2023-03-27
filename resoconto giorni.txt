@@ -451,3 +451,4 @@ alla fine non sono riuscito a far andare il main sembra che ci sia un problema c
 oggi ho rifatto il progetto, ma prima di fafrlo erso riuscti a fare le chiamate api con postaman e funziona. ma nella mattinanta ho dovuto fare braistorming e rifare il progetto
 e andare più lentamente ho iniziato con il fare da capo inizialr e fare una api get semplcie per riportare su swagger, dopo abbiamo deciso di fare da capo tutte le le crud e definirle.
 ho imparato ad utilizzare apache net beans per creare gli entity e fare i dto, con maps struct faremo i mapper e il repostitory nuovo. per ora ho fatto solo i 5 controller del libro
+funziona net beans
