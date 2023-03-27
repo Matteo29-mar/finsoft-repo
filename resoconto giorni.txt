@@ -446,3 +446,8 @@ nel pomeriggio sono tronato in azienda  e  ho chisto una mano per il test, sembr
 quello che sto facendo. mi ha fatto smontare il repository modificare il contorller e mi hanno detto di non fare i test non servono e infine di non fare un microservizio per robe ma
 di fare un unico file spring con clienti, libri e prestiti per risparmiare sul traffico tra un microservizio ed un'altro.
 alla fine non sono riuscito a far andare il main sembra che ci sia un problema con delle porte dovrei sistemarle e modificare il controller 
+
+27/3/23
+oggi ho rifatto il progetto, ma prima di fafrlo erso riuscti a fare le chiamate api con postaman e funziona. ma nella mattinanta ho dovuto fare braistorming e rifare il progetto
+e andare più lentamente ho iniziato con il fare da capo inizialr e fare una api get semplcie per riportare su swagger, dopo abbiamo deciso di fare da capo tutte le le crud e definirle.
+ho imparato ad utilizzare apache net beans per creare gli entity e fare i dto, con maps struct faremo i mapper e il repostitory nuovo. per ora ho fatto solo i 5 controller del libro
