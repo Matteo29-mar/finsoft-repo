@@ -1,11 +1,10 @@
 package com.stage.biblioteca.controller.libri;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
-public class libricontroller {
+public class LibriController {
     @GetMapping("api/getall")
     public String get_all(){return "sei nel get all";}
 

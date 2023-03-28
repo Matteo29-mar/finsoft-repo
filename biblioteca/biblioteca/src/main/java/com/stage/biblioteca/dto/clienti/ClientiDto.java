@@ -1,4 +1,4 @@
-package com.stage.biblioteca.dto;
+package com.stage.biblioteca.dto.clienti;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,8 +12,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.NamedQueries;
-import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;

@@ -452,3 +452,8 @@ oggi ho rifatto il progetto, ma prima di fafrlo erso riuscti a fare le chiamate 
 e andare più lentamente ho iniziato con il fare da capo inizialr e fare una api get semplcie per riportare su swagger, dopo abbiamo deciso di fare da capo tutte le le crud e definirle.
 ho imparato ad utilizzare apache net beans per creare gli entity e fare i dto, con maps struct faremo i mapper e il repostitory nuovo. per ora ho fatto solo i 5 controller del libro
 funziona net beans
+
+28/3/23
+Giornata iniziata con aver risolto il problema del driver di mariadb tramite il comando sudo apt-get install libmariadb-java, dopo quello ho aperto netbeans, nel progetto fantoccio 
+che ho fatto ho cliccato su other->entity from database-> ed ho selezionato il nuovo driver di mariadb per creare le entity(noi lo usiamo solo per quello ma volendo lo poassiamo fare come ide di sviluppo)
+successivamente dopo aver importato le entity generate su intelly idea ho creato il dto per libri, clienti e prestiti come le entity e nel pomeriggio ho fatto maps struct 

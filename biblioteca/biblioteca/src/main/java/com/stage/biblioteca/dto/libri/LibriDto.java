@@ -1,4 +1,4 @@
-package com.stage.biblioteca.dto;
+package com.stage.biblioteca.dto.libri;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.stage.biblioteca.entity.prestiti.Prestiti;
