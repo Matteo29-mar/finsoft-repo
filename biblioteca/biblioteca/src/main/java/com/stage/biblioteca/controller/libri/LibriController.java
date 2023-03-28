@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class libricontroller {
     @GetMapping("api/getall")
-    public String get_all(){
-        return "sei nel get all";
-    }
+    public String get_all(){return "sei nel get all";}
 
     @GetMapping("api/getisbn")
     public String get_isbn(){return "sei nel get isbn";}
