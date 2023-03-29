@@ -1,15 +1,27 @@
 package com.stage.biblioteca.controller.libri;
+import com.stage.biblioteca.dto.libri.LibriDto;
+import com.stage.biblioteca.services.libri.LibriService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 public class LibriController {
-    @GetMapping("api/getall")
-    public String get_all(){return "sei nel get all";}
+    @Autowired
+    LibriService libriService;
+    @GetMapping("api/getAll")
+    public List<LibriDto> getAll(){
+        return libriService.findLibriAll();
+    }
 
-    @GetMapping("api/getisbn")
-    public String get_isbn(){return "sei nel get isbn";}
+    @GetMapping("api/getIsbn")
+    public String getIsbn(){
+        return "new LibriDto()";
+    }
 
     @PostMapping("api/create")
     public String post_libro(){return "sei nel post create nuovo libro";}
