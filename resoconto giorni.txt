@@ -388,4 +388,5 @@ mapping tra entity e dto8 che seve per interfaccairsi con il front end  e fare t
 Ci siamo dedicati alla parte del repository e connesione solo che dava problemi con il hibernate e validation, superatop questo problema ci siamo messi a fare il primo getall dei libri
 
 30/3/23
-con oggi devo finire le crud dei libri
+con oggi devo finire le crud dei libri, sono riuscito a fare il controller del get isbn e il service del get isbn. 
+ho anche fatto gli altri ma danno errore 500
