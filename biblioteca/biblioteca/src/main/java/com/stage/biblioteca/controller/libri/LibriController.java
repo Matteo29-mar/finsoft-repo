@@ -1,7 +1,10 @@
 package com.stage.biblioteca.controller.libri;
 import com.stage.biblioteca.dto.libri.LibriDto;
+import com.stage.biblioteca.entity.libri.Libri;
 import com.stage.biblioteca.services.libri.LibriService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,22 +16,35 @@ import java.util.List;
 public class LibriController {
     @Autowired
     LibriService libriService;
+    //GETALL
     @GetMapping("api/getAll")
     public List<LibriDto> getAll(){
         return libriService.findLibriAll();
     }
-
-    @GetMapping("api/getIsbn")
-    public String getIsbn(){
-        return "new LibriDto()";
-    }
-
+    //GET ISBN
+   @GetMapping("api/getByIsbn")
+   public List<LibriDto> getByIsbn(@RequestParam String isbn){
+       return libriService.findLibriByIsbn(isbn);
+   }
+   //POST
     @PostMapping("api/create")
-    public String post_libro(){return "sei nel post create nuovo libro";}
-
+    public ResponseEntity<LibriDto> createNewLibro(@RequestBody LibriDto libroDto) {
+        LibriDto newLibroDto = libriService.createLibro(libroDto);
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(newLibroDto);
+    }
+    //PUT
     @PutMapping("api/update")
     public String put_libro(){return "sei nel update del libro ";}
 
+    //DELETE
     @DeleteMapping("api/delete")
-    public String delete_libro(){return "sei nel delete del libro";}
+    public ResponseEntity<Void> deleteLibroById(@PathVariable Integer id) {
+        libriService.deleteLibroById(id);
+        return ResponseEntity
+                .noContent()
+                .build();
+    }
+
 }

@@ -109,82 +109,7 @@ sono stati rilevati degli errori nell'organizzazione del progetto abbiamo preso 
 
 28/02/2023
 la giornata si è aperta con noi, membri del gruppo che abbiamo ridisegnato la visualizzazioned delle cartelle e la loro logica. 
-abbiamo lasciato index di primo arrivo poi abbiamo disegnato in questo modo
-.
-├── composer.json
-├── composer.lock
-├── controller
-│   ├── config_test.php
-│   ├── form.php
-│   ├── login_aziendale.php
-│   ├── login.php
-│   ├── log-out.php
-│   ├── permessi.php
-│   ├── register_aziendale.php
-│   ├── register.php
-│   └── test.php
-├── dashboard
-│   ├── admin
-│   │   └── dashboard_admin.css
-│   └── aziende
-│       ├── assets
-│       │   └── demo
-│       │       ├── chart-area-demo.js
-│       │       ├── chart-bar-demo.js
-│       │       ├── chart-pie-demo.js
-│       │       └── datatables-demo.js
-│       ├── charts.html
-│       ├── css
-│       │   ├── card.css
-│       │   ├── card.css.map
-│       │   ├── card.scss
-│       │   └── dashboard_azienda.css
-│       ├── dashboard_azienda.php
-│       ├── js
-│       │   ├── datatables-simple-demo.js
-│       │   └── scripts.js
-│       ├── recuperoPassword.html
-│       └── tables.html
-├── db
-│   └── db21_02_2023_vuoto.sql
-├── error
-│   ├── 401.html
-│   ├── 403.html
-│   ├── 404.html
-│   ├── 500.html
-│   ├── error-404-monochrome.svg
-│   ├── error.css
-│   ├── forbidden.css
-│   ├── forbidden.css.map
-│   └── forbidden.scss
-├── immagini
-│   ├── img_sito
-│   │   ├── logo_progetto.png
-│   │   ├── sfondo.jpg
-│   │   └── user_icon.png
-│   ├── ITS-STG23.png
-│   └── uploads
-├── index.css
-├── index.html
-├── mailer
-│   └── mailer.php
-├── README.md
-├── vendor/ con i suoi file 
-│ 
-│       
-└── view
-    ├── chi_siamo
-    │   ├── chi_siamo.css
-    │   └── chi_siamo.html
-    ├── login_register
-    │   ├── login_register.css
-    │   └── login_register.html
-    ├── nav_footer.css
-    └── servizio
-        ├── servizio.css
-        ├── servizio.css.map
-        ├── servizio.html
-        └── servizio.scss
+
 
 successivamente ho sistemato i vari file css, rinominato dei file e creato de i file per far combaciare quasi il tutto, il resto l'ho lasciato ai altri 
 membri del gruppo gli ultimi ritocchi.
@@ -456,4 +381,11 @@ funziona net beans
 28/3/23
 Giornata iniziata con aver risolto il problema del driver di mariadb tramite il comando sudo apt-get install libmariadb-java, dopo quello ho aperto netbeans, nel progetto fantoccio 
 che ho fatto ho cliccato su other->entity from database-> ed ho selezionato il nuovo driver di mariadb per creare le entity(noi lo usiamo solo per quello ma volendo lo poassiamo fare come ide di sviluppo)
-successivamente dopo aver importato le entity generate su intelly idea ho creato il dto per libri, clienti e prestiti come le entity e nel pomeriggio ho fatto maps struct 
+successivamente dopo aver importato le entity generate su intelly idea ho creato il dto per libri, clienti e prestiti come le entity e nel pomeriggio ho fatto il maps structper fare il 
+mapping tra entity e dto8 che seve per interfaccairsi con il front end  e fare tutte le operazioni senza intaccarre entity che serve solo come modello per il database.
+
+29/3/23
+Ci siamo dedicati alla parte del repository e connesione solo che dava problemi con il hibernate e validation, superatop questo problema ci siamo messi a fare il primo getall dei libri
+
+30/3/23
+con oggi devo finire le crud dei libri

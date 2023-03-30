@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 
 @Service
@@ -17,6 +16,8 @@ public class LibriService {
 
   @Autowired
     LibriRepo librirepo;
+
+  //GET
     public List<LibriDto> findLibriAll(){
 
        List<LibriDto> responseFindAll =  new ArrayList<>();
@@ -28,6 +29,31 @@ public class LibriService {
          return  responseFindAll;
     }
 
+    //GET
+    public List<LibriDto> findLibriByIsbn(String isbn) {
+        List<LibriDto> responseFindByIsbn = new ArrayList<>();
+        librirepo.findAll().forEach(libro -> {
+            if (libro.getIsbn().equals(isbn)) {
+                responseFindByIsbn.add(LibriMapper.INSTANCE.todto(libro));
+            }
+        });
+        return responseFindByIsbn;
+    }
+
+    //POST
+    public LibriDto createLibro(LibriDto libroDto) {
+        Libri libro = LibriMapper.INSTANCE.toEntity(libroDto);
+        libro = librirepo.save(libro);
+        return LibriMapper.INSTANCE.todto(libro);
+    }
+
+
+    //PUT
+
+    //DELETE
+    public void deleteLibroById(Integer idLibro) {
+        librirepo.deleteById(idLibro);
+    }
 
 }
 
