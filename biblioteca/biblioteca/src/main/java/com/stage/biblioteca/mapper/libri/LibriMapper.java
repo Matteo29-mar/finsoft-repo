@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface LibriMapper {
 
     public static final LibriMapper INSTANCE = Mappers.getMapper(LibriMapper.class);
-    public Libri toEntity(LibriDto dto);
+    public  Libri toEntity(LibriDto dto);
 
     public LibriDto todto(Libri entity);
 }

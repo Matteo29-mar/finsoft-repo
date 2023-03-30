@@ -4,6 +4,7 @@ import com.stage.biblioteca.dto.libri.LibriDto;
 import com.stage.biblioteca.entity.libri.Libri;
 import com.stage.biblioteca.mapper.libri.LibriMapper;
 import com.stage.biblioteca.repository.libri.LibriRepo;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,18 +42,28 @@ public class LibriService {
     }
 
     //POST
-    public LibriDto createLibro(LibriDto libroDto) {
-        Libri libro = LibriMapper.INSTANCE.toEntity(libroDto);
-        libro = librirepo.save(libro);
-        return LibriMapper.INSTANCE.todto(libro);
+    public void  createLibro(LibriDto libroDto) {
+        Libri libri = LibriMapper.INSTANCE.toEntity(libroDto);
+        librirepo.save(libri);
     }
 
 
     //PUT
+    public void updateLibro(Integer idLibro, LibriDto libriDto){
+        Libri libri = librirepo.findById(idLibro).orElseThrow(() -> new EntityNotFoundException("libro non trovato con id " + idLibro));
+        libri.setIsbn(libriDto.getIsbn());
+        libri.setTitolo(libriDto.getTitolo());
+        libri.setAutore(libriDto.getAutore());
+        libri.setAnno(libriDto.getAnno());
+        libri.setGenere(libriDto.getGenere());
+        librirepo.save(libri);
+
+    }
 
     //DELETE
-    public void deleteLibroById(Integer idLibro) {
-        librirepo.deleteById(idLibro);
+    public void deleteBookId(Integer id) {
+        Libri libri = librirepo.findById(id).orElseThrow(() -> new EntityNotFoundException("libro non trovato : " + id));
+        librirepo.delete(libri);
     }
 
 }

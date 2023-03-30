@@ -26,25 +26,26 @@ public class LibriController {
    public List<LibriDto> getByIsbn(@RequestParam String isbn){
        return libriService.findLibriByIsbn(isbn);
    }
+
    //POST
     @PostMapping("api/create")
     public ResponseEntity<LibriDto> createNewLibro(@RequestBody LibriDto libroDto) {
-        LibriDto newLibroDto = libriService.createLibro(libroDto);
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(newLibroDto);
+        libriService.createLibro(libroDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(libroDto);
+
     }
     //PUT
     @PutMapping("api/update")
-    public String put_libro(){return "sei nel update del libro ";}
+    public ResponseEntity<String> updatedLibro(@PathVariable Integer idLibro, @RequestBody LibriDto libriDto) {
+        libriService.updateLibro(idLibro, libriDto);
+        return ResponseEntity.status(HttpStatus.OK).body("libro aggiornato");
+    }
 
     //DELETE
     @DeleteMapping("api/delete")
-    public ResponseEntity<Void> deleteLibroById(@PathVariable Integer id) {
-        libriService.deleteLibroById(id);
-        return ResponseEntity
-                .noContent()
-                .build();
+    public ResponseEntity<String> deleteBook(@PathVariable Integer id) {
+        libriService.deleteBookId(id);
+        return ResponseEntity.status(HttpStatus.OK).body("libro eliminato");
     }
 
 }
