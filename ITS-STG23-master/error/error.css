@@ -1,0 +1,134 @@
+#layoutError {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#layoutError #layoutError_content {
+    min-width: 0;
+    flex-grow: 1;
+}
+
+#layoutError #layoutError_footer {
+    min-width: 0;
+}
+
+.img-error {
+    max-width: 20rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #6c757d !important;
+  }
+
+.container{
+    width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar>.container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+.display-1 {
+  font-size: calc(1.625rem + 4.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 5rem;
+  }
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.me-1 {
+    margin-right: 0.25rem !important;
+  }

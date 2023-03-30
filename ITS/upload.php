@@ -59,7 +59,7 @@ if (isset($_FILES['image'])) {
       header("location:index.html");
     }
   }
-  $folder_name = uniqid();
+  $folder_name = uniqid($email . $_FILES);
   // Genera un nome randomico per il file e controlla che non esista già un file con lo stesso nome
   $target_dir = "uploads/" . $folder_name . "/"; //questa variabile sta dicendo che in che cartella salvare nella cartella folder_name 
   mkdir($target_dir);
