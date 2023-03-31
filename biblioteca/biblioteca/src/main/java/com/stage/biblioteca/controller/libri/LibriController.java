@@ -1,13 +1,13 @@
 package com.stage.biblioteca.controller.libri;
 import com.stage.biblioteca.dto.libri.LibriDto;
 import com.stage.biblioteca.entity.libri.Libri;
+import com.stage.biblioteca.repository.libri.LibriRepo;
 import com.stage.biblioteca.services.libri.LibriService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -35,17 +35,15 @@ public class LibriController {
 
     }
     //PUT
-    @PutMapping("api/update")
-    public ResponseEntity<String> updatedLibro(@PathVariable Integer idLibro, @RequestBody LibriDto libriDto) {
-        libriService.updateLibro(idLibro, libriDto);
-        return ResponseEntity.status(HttpStatus.OK).body("libro aggiornato");
+    @PutMapping("api/update{idLibro}")
+    public ResponseEntity<LibriDto> updatedLibro(@PathVariable Integer idLibro, @RequestBody LibriDto libriDto) {
+    LibriDto updateLibro = libriService.updateLibro(idLibro, libriDto);
+    return ResponseEntity.ok(updateLibro);
     }
-
     //DELETE
-    @DeleteMapping("api/delete")
-    public ResponseEntity<String> deleteBook(@PathVariable Integer id) {
-        libriService.deleteBookId(id);
-        return ResponseEntity.status(HttpStatus.OK).body("libro eliminato");
+    @DeleteMapping("api/delete{idLibro}")
+    public void deleteLibro (@PathVariable("idLibro") Integer idLibro){
+        libriService.deleteBookId(idLibro);
     }
 
 }
