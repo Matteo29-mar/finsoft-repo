@@ -28,7 +28,7 @@ inzio con aggiustare il css e aggiungo il footer.
 mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i commenti che scrivo io.
 Effetuata la sezione register e login, ho fatto html e il php la registrazione avviene ci sono dei problemi con il login.
 Risolto il problema del login, php non gli piacciono gli echo mettere i printf, manca solo hash della password.
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 13/02/2023
 Inizio giornata mi reco in ufficio, il bus ha fatto tardi.
 Effettuo dei test register e login funzionano, in metà mattinata faccio hash della password(10 30) funziona, dava solo dedi problemami per la
@@ -53,16 +53,15 @@ lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia r
 16/02/2023
 giorno da remoto, mi dedico al dockerfile come ultima cosa tanto il progetto portofolio è finito domani ci spiegano 
 il nostro progetto e lunedì lo iniziamo.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-19/02/2023
+20/02/2023
 Oggi ci presentano il nostro progetto, una web app di caricamento di immagini max 10mb, per vendere dei proddotti. diviso in :
 -privato entra nella index per vendere le sue cose sul sito, solo un file 
 -aziendale vari file, login-register- elenco
 -l'unica cosa comune il css e il js 
 -superadmin possibiltà di modificare le chiamate delle inserzioni
-no pop-up ma modali
-
-20/02/2023
+no pop-up ma modali.
 il giorno è iniziato con la creazione del team per il progetto, sono nominato team leader, abbiamo scelto i ruoli.
 usiamo per la web app, apche2, mysql, php , html e css con aggiutna di javascript.
 adesso sto facendo i branch le issue e il diagramma per la web app.
@@ -99,7 +98,7 @@ Sto facendo delle modifiche al codice di ieri ho aggiunto che tipo di file vengo
 come png, jpeg, gif, svg, il controllo di quanto è grande il file, se esiste un nome uguale e
 la funzione di generare dei nomi randomici all'immagine per non avere nomi uguali.
 ora provo a fare la pagina di visualizzazione  delle aziende per la proposta e poi la possibilità di inserire più immagini
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 27/02/2023
 questo giorno affronto symfony per l'invio delle email, i file che servono solo è installare il composer tramite php e sul sito symfony,
@@ -109,8 +108,6 @@ sono stati rilevati degli errori nell'organizzazione del progetto abbiamo preso 
 
 28/02/2023
 la giornata si è aperta con noi, membri del gruppo che abbiamo ridisegnato la visualizzazioned delle cartelle e la loro logica. 
-
-
 successivamente ho sistemato i vari file css, rinominato dei file e creato de i file per far combaciare quasi il tutto, il resto l'ho lasciato ai altri 
 membri del gruppo gli ultimi ritocchi.
 adesso ritorno al back-end dell'invio delle email, ma preden solo la prima
@@ -132,7 +129,7 @@ sempre i nuovi file chmod 777 ITS/* e prende i nuovi file ma se volessi farlo in
 oggi mi sto dedicando a mergiare le modifiche fatte nel finsoft-repo con its-stg23 branch matteo, sto riscontrando un po di problemia.
 ho fatto l'upload dell'immagine, ma il clienti vuole più immagini da visualizzare, ma non so se riesco a farlo ci provo.
 alla fine ho mergiato tutto e funziona
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 6/3/23
 lunedì mattina, disastro perchè git hub non mi fa pullare le modifiche, poi ho scoperto che era un probelam della chiave privata.
 risolto questo scorpo che ho fatto questo errore, ho dato gli accesso 777 all'utente normale facendo avere gli stessi privilegi del root
@@ -171,7 +168,7 @@ for ($i = 0; $i <= count($image_file["name"]); $i++) {
 }
 
 funziona in parte
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 13/3/23
 Oggi mi devo dedicare a finire le robe di venerdì, sono ruuscito a caricare le immagini nella card generata in modo automatico in base a quanti 
 prodotti ci sono nel database per fare ciò ho dovuto fare una api in php prendendo i file chiamati barra.php, dashboard_azienda.php e carosello.php
@@ -342,7 +339,7 @@ Nella gioranta di oggi ci stiamo dedicando a sistemare alcune cose inerenti a gr
 prodotto quando un'azienda clicca sul tasto elimina.
 io mi sto cercando di ultimare la parte di gestione delle email e di integrare qualcosa di sicurezza informatica per prevenire degli attacchi.
 la parte di sql injection è stata finita adesso la web app è protetta da questo lato qui devo finire però il lato email e mmagari altre cose di sicurezza informatica
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 20/3/23
 inizio settimana, inziato con problemi sul server perchè ci hanno spento il db online. quinid abbiamo dovuto portare tutto in locale, menomale che avevo un backup 
 aggiornato a giovedì. Notizia domani ci spostano di progetto per lavorare sul progetto per volskvagen in cloud, bene.
@@ -371,7 +368,7 @@ nel pomeriggio sono tronato in azienda  e  ho chisto una mano per il test, sembr
 quello che sto facendo. mi ha fatto smontare il repository modificare il contorller e mi hanno detto di non fare i test non servono e infine di non fare un microservizio per robe ma
 di fare un unico file spring con clienti, libri e prestiti per risparmiare sul traffico tra un microservizio ed un'altro.
 alla fine non sono riuscito a far andare il main sembra che ci sia un problema con delle porte dovrei sistemarle e modificare il controller 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 27/3/23
 oggi ho rifatto il progetto, ma prima di fafrlo erso riuscti a fare le chiamate api con postaman e funziona. ma nella mattinanta ho dovuto fare braistorming e rifare il progetto
 e andare più lentamente ho iniziato con il fare da capo inizialr e fare una api get semplcie per riportare su swagger, dopo abbiamo deciso di fare da capo tutte le le crud e definirle.
@@ -395,6 +392,6 @@ ho anche fatto gli altri ma danno errore 500
 Nella giornata di oggi mi sono dedicat alla creazione delle altre tipi di crud, sono riuscito a realizzare la post( dovevo eliminare tutte le dipendenze della chiave esterna che si tirava su), 
 ho fatto anche il delete del libro, manca solo update che mi da errore 500.
 Quindi ho la get all, il get isbn, la post e il delete.
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3/4/23
 lunedì mattina nella giornata di oggi cerco di fare update del libro, devo riuscire a creare questo.
