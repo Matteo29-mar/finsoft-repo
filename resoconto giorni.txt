@@ -390,3 +390,11 @@ Ci siamo dedicati alla parte del repository e connesione solo che dava problemi 
 30/3/23
 con oggi devo finire le crud dei libri, sono riuscito a fare il controller del get isbn e il service del get isbn. 
 ho anche fatto gli altri ma danno errore 500
+
+31/3/23
+Nella giornata di oggi mi sono dedicat alla creazione delle altre tipi di crud, sono riuscito a realizzare la post( dovevo eliminare tutte le dipendenze della chiave esterna che si tirava su), 
+ho fatto anche il delete del libro, manca solo update che mi da errore 500.
+Quindi ho la get all, il get isbn, la post e il delete.
+
+3/4/23
+lunedì mattina nella giornata di oggi cerco di fare update del libro, devo riuscire a creare questo.
