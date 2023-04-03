@@ -395,3 +395,7 @@ Quindi ho la get all, il get isbn, la post e il delete.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3/4/23
 lunedì mattina nella giornata di oggi cerco di fare update del libro, devo riuscire a creare questo.
+Sono riuscito a fare la put del libro, dovrei scrivere meglio i controller . Al massimo faccio il cliente.
+Ho fatto il dto, entity, repo, mapper e sto finendo il controller e il service del cliente. parte lo swagger
+
+4/4/23
