@@ -8,7 +8,8 @@ import java.util.List;
 import jakarta.validation.Valid;
 import lombok.Data;
 
-
+//@Jsoninclude = qui vengono riportati dei json
+//il dto serve come comunicatore tra il front end e tutti il layer dell'app tutte le funzioni si dovranno riportare con lui
 @Data
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 

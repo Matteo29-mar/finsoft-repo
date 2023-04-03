@@ -15,6 +15,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+//@data= lombok serve per i costruttori e get and set, @column è il nome della colonna del db
+//questa è l'entità uguale al database che non dovrà essere toccata
 @Entity
 @Data
 @Table(name = "libri")

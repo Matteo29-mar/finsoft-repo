@@ -9,14 +9,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
-
+//@autowired =serve per inniettare un'istanza all'interno della classe corrente
+//@service = componente di servizio dell'app
+//nel service è la logica che sta dietro alle funzionalità dell'applicazione
 @Service
 public class LibriService {
   @Autowired
     LibriRepo librirepo;
-  //GET
+  //GET= getall qua riporta tutti i libri tramite una lista che trova con il metodo findall
+  //tutti i libri dentro al repo
     public List<LibriDto> findLibriAll(){
        List<LibriDto> responseFindAll =  new ArrayList<>();
         librirepo.findAll().forEach(libro -> {
@@ -25,7 +28,10 @@ public class LibriService {
 /*        Libri ll =  librirepo.findById( Integer.decode("1")).get();*/
          return  responseFindAll;
     }
-    //GET
+    //GET  = getisbn ha lo stesso funzionalità del get all solo che cerca isbn
+    //responseFindbyisbn servono per contenere i libri trovati, il repo serve per
+    //trovare i libri e poi fa il foreach per cercare isbn del repository utilizzando la funzione
+    // todo del mapper aggiungendo all'attributo
     public List<LibriDto> findLibriByIsbn(String isbn) {
         List<LibriDto> responseFindByIsbn = new ArrayList<>();
         librirepo.findAll().forEach(libro -> {
@@ -36,29 +42,38 @@ public class LibriService {
         return responseFindByIsbn;
     }
 
-    //POST
+    //POST = post creazione di un nuovo libro, utilizzando il mapper per convertire l'oggetto
+    //libridto all'oggetto libri per salvarlo nel repository
     public void  createLibro(LibriDto libroDto) {
         Libri libri = LibriMapper.INSTANCE.toEntity(libroDto);
         librirepo.save(libri);
     }
+ 
+
+    //PUT = update
+    public LibriDto updateLibro(LibriDto libriDto, Integer idLibro){
+    AtomicReference<LibriDto> response = new AtomicReference<>(new LibriDto());
+    librirepo.findAll().forEach(putLibro -> {
+        if(putLibro.getIdLibro().intValue() == idLibro.intValue() ){
 
 
-    //PUT
-    public LibriDto updateLibro(Integer idLibro, LibriDto libriDto){
-        Optional<Libri> libriesiste = librirepo.findById(libriDto.getIdLibro());
-        if(libriesiste.isPresent()){
-            Libri libriUpdate = libriesiste.get();
-            LibriMapper.INSTANCE.toEntity(libriDto);
-            librirepo.save(libriUpdate);
+            putLibro.setIsbn(libriDto.getIsbn());
+            putLibro.setTitolo(libriDto.getTitolo());
+            putLibro.setAutore(libriDto.getAutore());
+            putLibro.setAnno(libriDto.getAnno());
+            putLibro.setGenere(libriDto.getGenere());
+            putLibro = librirepo.save(putLibro);
+            response.set(LibriMapper.INSTANCE.todto(putLibro));
         }
-        return libriDto;
+    });
+    return response.get();
     }
 
-    //DELETE
+    //DELETE = delete
     public void deleteBookId(Integer idLibro) {
         librirepo.deleteById(idLibro);
     }
-
+    
 }
 
 

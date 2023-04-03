@@ -10,7 +10,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import java.util.List;
 import java.util.Optional;
 
-
+//qui ci colleghiamo al db, questo è il repository, jpaRepository fornisce un po di metodi già pronti se no crei dei motodi che fannno delle query personalizzate da qui
 public interface LibriRepo extends JpaRepository<Libri, Integer> {
 
 }
