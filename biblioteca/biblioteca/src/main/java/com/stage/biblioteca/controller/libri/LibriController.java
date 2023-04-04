@@ -24,12 +24,15 @@ public class LibriController {
     }
 
     // GET ISBN
+
+    //@requestparam per recuperare stringhe da una richiesta http in get, serve per recupare un valore come stringa
     @GetMapping("api/libro/getByIsbn")
     public List<LibriDto> getByIsbn(@RequestParam String isbn) {
         return libriService.findLibriByIsbn(isbn);
     }
 
     // POST
+    // @requestbody viene utlizzzato per recuperare un corpo da una richiesta http da post, in genere per recuperare un oggetto in json
     @PostMapping("api/libro/create")
     public ResponseEntity<LibriDto> createNewLibro(@RequestBody LibriDto libroDto) {
         libriService.createLibro(libroDto);
@@ -37,6 +40,7 @@ public class LibriController {
     }
 
     // PUT
+    //@pathvariabile = recupera una parte dell url come parametro
     @PutMapping("api/libro/update{idLibro}")
     public ResponseEntity<LibriDto> upLibro(@PathVariable("idLibro") Integer idLibro, @RequestBody LibriDto libriDto) {
         LibriDto res = libriService.updateLibro(libriDto, idLibro);
