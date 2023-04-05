@@ -32,7 +32,7 @@ public class Clienticontroller {
     }
     //GET
     @GetMapping("api/cliente/getEmail")
-    public List<ClientiDto> getEmail(@RequestParam String email){return clientiService.findClientiByEmail(email);}
+    public ClientiDto getEmail(@RequestParam String email){return clientiService.findClientiByemail(email);}
     //POST
     @PostMapping("api/cliente/create")
     public ResponseEntity<ClientiDto> createNewCliente(@RequestBody ClientiDto clientiDto) {

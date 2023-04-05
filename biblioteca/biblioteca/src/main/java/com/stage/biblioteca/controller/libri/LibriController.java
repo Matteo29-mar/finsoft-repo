@@ -27,8 +27,8 @@ public class LibriController {
 
     //@requestparam per recuperare stringhe da una richiesta http in get, serve per recupare un valore come stringa
     @GetMapping("api/libro/getByIsbn")
-    public List<LibriDto> getByIsbn(@RequestParam String isbn) {
-        return libriService.findLibriByIsbn(isbn);
+    public LibriDto getByIsbn(@RequestParam String isbn) {
+        return libriService.findLibriIsbn(isbn);
     }
 
     // POST
