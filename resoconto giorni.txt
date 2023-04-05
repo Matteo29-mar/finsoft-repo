@@ -396,7 +396,12 @@ Quindi ho la get all, il get isbn, la post e il delete.
 3/4/23
 lunedì mattina nella giornata di oggi cerco di fare update del libro, devo riuscire a creare questo.
 Sono riuscito a fare la put del libro, dovrei scrivere meglio i controller . Al massimo faccio il cliente.
-Ho fatto il dto, entity, repo, mapper e sto finendo il controller e il service del cliente. parte lo swagger
+Ho fatto il dto, entity, repo, mapper e sto finendo il controller e il service del cliente. e parte lo swagger.
 
 4/4/23
-oggi ho concluso il microservizio del cliente ed ho aggiustato in meglio dei controller 
+oggi ho concluso il microservizio del cliente ed ho aggiustato in meglio dei controller finendo anche il service.
+ho imparato delle cose nuove per quanto riguarda lo sviluppo  delle logiche del controller in spring bootstrap
+
+5/3/23
+Con oggi dovrei affrontare meglio il discorso di jpa repository, sistemo il codice del controller e mi dedico a prestiti, dopo prestiti dovrei iniziare a vedere per il container 
+e docker per istanziarlo su aws
