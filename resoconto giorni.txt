@@ -405,3 +405,14 @@ ho imparato delle cose nuove per quanto riguarda lo sviluppo  delle logiche del 
 5/3/23
 Con oggi dovrei affrontare meglio il discorso di jpa repository, sistemo il codice del controller e mi dedico a prestiti, dopo prestiti dovrei iniziare a vedere per il container 
 e docker per istanziarlo su aws
+
+6/3/23
+giornata iniziata con il docker dell'applicazione, il docker spring boot non parte da dei problemi  alla connessione del db.
+allora ho fatto il db di mariadb con il container eseguito con la riga  docker run -dit --name bibliodb --env MARIADB_USER=finsoft --env MARIADB_PASSWORD=finsoft --env MARIADB_ROOT_PASSWORD=root  mariadb:latest
+e con questo ho creato il container, usato anche heidesql per visionare il db fatto con istanze mi sono importato il file .sql biblioteca. 
+ho creato le tabelle della biblioteca, successivamente ho voluto mettere le porte 3333:3306 per connettermi.
+per testare ho provato a runnare l'app senza il container attaccato al db docker, non parte da connesion refuse perchè lo yaml c'è localhost:3306, non si connette perchè si tenta 
+di connettersi al localhost della macchina e non del docker quindi sono andato sul terminale ed ho eseguito docker exec -it bibliodb bash, In sintesi, il comando "docker exec -it bibliodb bash" consente di accedere alla shell 
+di un container Docker denominato "bibliodb" e di interagire con esso come se si fosse effettivamente loggati all'interno del sistema operativo del container.
+entrato dentro il container ho fatto hostname -I per scoprire host, di cui era 172.18.0.2( però potrebbe cambiare dovrei fare una network) ho sostituito nello yaml 
+da localhost ip del container e da qui è partito il tutto, ma senza il docker dello spring boot perchè lo faccio e va in connection timeout.

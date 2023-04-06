@@ -45,4 +45,5 @@ public class Libri implements Serializable {
     private String genere;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLibro")
     private List<Prestiti> prestitiList;
+
 }
