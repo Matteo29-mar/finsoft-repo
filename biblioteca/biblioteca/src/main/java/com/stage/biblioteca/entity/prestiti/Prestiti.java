@@ -28,13 +28,13 @@ public class Prestiti implements Serializable {
     private Integer idPrestito;
     @Basic(optional = false)
     @Column(name = "data_inizio")
-    private int dataInizio;
+    private String dataInizio;
     @Basic(optional = false)
     @Column(name = "data_fine")
-    private int dataFine;
+    private String dataFine;
     @Basic(optional = false)
     @Column(name = "data_consegna")
-    private int dataConsegna;
+    private String dataConsegna;
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
     @ManyToOne(optional = false)
     private Clienti idCliente;
