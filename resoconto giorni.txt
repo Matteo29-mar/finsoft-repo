@@ -402,7 +402,7 @@ Ho fatto il dto, entity, repo, mapper e sto finendo il controller e il service d
 oggi ho concluso il microservizio del cliente ed ho aggiustato in meglio dei controller finendo anche il service.
 ho imparato delle cose nuove per quanto riguarda lo sviluppo  delle logiche del controller in spring bootstrap
 
-5/3/23
+5/4/23
 Con oggi dovrei affrontare meglio il discorso di jpa repository, sistemo il codice del controller e mi dedico a prestiti, dopo prestiti dovrei iniziare a vedere per il container 
 e docker per istanziarlo su aws
 
@@ -416,3 +416,10 @@ di connettersi al localhost della macchina e non del docker quindi sono andato s
 di un container Docker denominato "bibliodb" e di interagire con esso come se si fosse effettivamente loggati all'interno del sistema operativo del container.
 entrato dentro il container ho fatto hostname -I per scoprire host, di cui era 172.18.0.2( però potrebbe cambiare dovrei fare una network) ho sostituito nello yaml 
 da localhost ip del container e da qui è partito il tutto, ma senza il docker dello spring boot perchè lo faccio e va in connection timeout.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12/4/23
+oggi ho fatto tutta la giornata docker, sono risuctito a fare due container uno con uno spring boot e mariadb, partono si comunicano.
+i problemi erano che nello yaml dicevo di collegarsi al ip quando creavo il container ivece dovevo mettere e fare la build con il nome del container e poi pechè non specificavo 
+il nome dell'immagine io facevo docker build -t prova . invece dovevo fare docker build -t prova:1.0 . che specificava anche il tag per farlo partire docker run --name prova --network netspring prova:1.0
+sono partiti.
+mi hanno assegnato di fare lo swarm docker domani lo affronto
