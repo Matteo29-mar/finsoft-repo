@@ -416,6 +416,10 @@ di connettersi al localhost della macchina e non del docker quindi sono andato s
 di un container Docker denominato "bibliodb" e di interagire con esso come se si fosse effettivamente loggati all'interno del sistema operativo del container.
 entrato dentro il container ho fatto hostname -I per scoprire host, di cui era 172.18.0.2( però potrebbe cambiare dovrei fare una network) ho sostituito nello yaml 
 da localhost ip del container e da qui è partito il tutto, ma senza il docker dello spring boot perchè lo faccio e va in connection timeout.
+oggi inoltre siamo andati sopra al 5 piano per parlare con il responsabile aziendale roberto Leva per fare un punto della nostra situazioni durante lo stage, a me solo
+è stato offerto di andare a lavorare con il team di cebrosa insieme a dEnrico un responsabile della parte di aws qui a presetn, non ho rifiutato ma ho fatto capire che
+sono interessato ma per questioni di tempo e viaggio mi viene scomodo ma che sarei disponibile ad lavorare via meet oppure andare anche solo una volta a settimana ma in teoria dovrebbe venire anche lui 
+li qui a finsoft
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12/4/23
 oggi ho fatto tutta la giornata docker, sono risuctito a fare due container uno con uno spring boot e mariadb, partono si comunicano.
@@ -423,3 +427,7 @@ i problemi erano che nello yaml dicevo di collegarsi al ip quando creavo il cont
 il nome dell'immagine io facevo docker build -t prova . invece dovevo fare docker build -t prova:1.0 . che specificava anche il tag per farlo partire docker run --name prova --network netspring prova:1.0
 sono partiti.
 mi hanno assegnato di fare lo swarm docker domani lo affronto
+13/4/23
+gioranta di smart, ho aiutato un mio collega a risolvere dei problemi poi mi sono dedicato a mettere in pari il mio pc con il pc d'ufficio e ho rifatto partirei due container
+separati da solo, poi ho installato virtualbox ed una versione di debian 11 per metterlo nella macchina virtuale. tutto quest oper fare lo swarm ma non ci sono
+riuscito perchè non funzioanva la macchina virtuale penso per potenza inadatta del mio pc di casa domani con il pc d'ufficio.
