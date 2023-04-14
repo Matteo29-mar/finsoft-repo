@@ -427,7 +427,14 @@ i problemi erano che nello yaml dicevo di collegarsi al ip quando creavo il cont
 il nome dell'immagine io facevo docker build -t prova . invece dovevo fare docker build -t prova:1.0 . che specificava anche il tag per farlo partire docker run --name prova --network netspring prova:1.0
 sono partiti.
 mi hanno assegnato di fare lo swarm docker domani lo affronto
+
 13/4/23
 gioranta di smart, ho aiutato un mio collega a risolvere dei problemi poi mi sono dedicato a mettere in pari il mio pc con il pc d'ufficio e ho rifatto partirei due container
 separati da solo, poi ho installato virtualbox ed una versione di debian 11 per metterlo nella macchina virtuale. tutto quest oper fare lo swarm ma non ci sono
 riuscito perchè non funzioanva la macchina virtuale penso per potenza inadatta del mio pc di casa domani con il pc d'ufficio.
+
+14/4/23
+Venerdì, ho installato virtualbox per creare una serie di worker per il mio cluster di swarm di docker, perso la mattina per installare debian 11 sulla macchina, per evitare 
+di dover installare da zero la vm mi sono fatto una copia vuota prima di iniziare a lavorare. 
+Dentro la vm ho installato docker e importato la chiave d'accesso al manager dello swarm sulla macchina fisica, si parlano e adesso sto per fare il service vediamo se riesco abbiamo
+replicare lo spring boot sul worker.
