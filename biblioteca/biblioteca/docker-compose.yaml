@@ -1,20 +1,25 @@
 version: "3.9"
 
 services:
-  spring:
-    image: spring:1.0
+  springdocker:
+    image: spring:2.0
     ports:
       - "8080:8080"
     networks:
       - netspring
-
-  mariabiblio:
+    depends_on:
+      - db-container
+  db-container:
     image: mariadb:latest
     environment:
       MYSQL_ROOT_PASSWORD: finsoft
+      MYSQL_DATABASE: maria
+    volumes:
+      - my-mariadb:/var/lib/mysql
     networks:
       - netspring
 
+volumes:
+  my-mariadb:
 networks:
   netspring:
-    external: true

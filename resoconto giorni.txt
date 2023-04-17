@@ -438,3 +438,10 @@ Venerdì, ho installato virtualbox per creare una serie di worker per il mio clu
 di dover installare da zero la vm mi sono fatto una copia vuota prima di iniziare a lavorare. 
 Dentro la vm ho installato docker e importato la chiave d'accesso al manager dello swarm sulla macchina fisica, si parlano e adesso sto per fare il service vediamo se riesco abbiamo
 replicare lo spring boot sul worker.
+Dopo aver fatto la riunione mi è stato chiesto di deployare il docker-compose.yaml, di sono dei problemi con la connesione ad db.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17/4/23
+Dopo la riunione di sta mattina, ho esposto il mio problema e mi è stato detto di creare un volume per avere la persistenza dei dati, il problema è che quando tento di connettermi al db
+il database non è stato creato  e quindi non lo trova quando tento di creare il compose.
+Dopo aver creato il volume il compose è partito adesso faccio ulteriore test.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

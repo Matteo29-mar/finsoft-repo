@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://mariabiblio:3306/maria
+    url: jdbc:mariadb://db-container:3306/maria
     username: root
     password: finsoft
   jpa:
