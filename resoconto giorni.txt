@@ -444,4 +444,24 @@ Dopo aver fatto la riunione mi è stato chiesto di deployare il docker-compose.y
 Dopo la riunione di sta mattina, ho esposto il mio problema e mi è stato detto di creare un volume per avere la persistenza dei dati, il problema è che quando tento di connettermi al db
 il database non è stato creato  e quindi non lo trova quando tento di creare il compose.
 Dopo aver creato il volume il compose è partito adesso faccio ulteriore test.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18/4/23
+Martedì, oggi mi è stato assegnato una nuova tsk ovvero quello di creare una replica del container che è al'interno del docker-compose dentro la macchina virtuale usata per lo 
+swarm. i comandi usati per creare lo stack sono stati:
+-docker swarm init per creare il manager che mi ha creato una stringa con un token da inserire nella vm e li ho creato il worker.
+-docker node ls per vedere i nodi 
+poi dopo questo ho modificato nel docker compose.yaml e inserito questo per replicarlo    
+ deploy:
+      replicas: 3
+      placement:
+        max_replicas_per_node: 1
+      restart_policy:
+        condition: on-failure
+- creato lo stack con il comando docker stack deploy --compose-file docker-compose.yaml stackspring per creare lo stack e crearlo nel worker anche, creato solo per lo spring non 
+per il db perchè non è buona norma, per ridondanza di dati e dupliazione
+-docker stack ls per vedere lo stack oppure docker stack service stackspring
+-docker stack ps stackspring per vedere quelli attivi
+-docker stack rm stackspring per stoppare e rimuovere lo stack.
+tutto e non riesco a farlo partire lo swagger rimane appesso e non si connette allo swagger, domani cerco di risolvere il problema sicuro devo mappare meglio le porte
+
+19/4/23
