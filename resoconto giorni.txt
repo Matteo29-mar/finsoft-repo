@@ -465,3 +465,4 @@ per il db perchè non è buona norma, per ridondanza di dati e dupliazione
 tutto e non riesco a farlo partire lo swagger rimane appesso e non si connette allo swagger, domani cerco di risolvere il problema sicuro devo mappare meglio le porte
 
 19/4/23
+ricordarsi di fare il docker
