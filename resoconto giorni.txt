@@ -465,4 +465,13 @@ per il db perchè non è buona norma, per ridondanza di dati e dupliazione
 tutto e non riesco a farlo partire lo swagger rimane appesso e non si connette allo swagger, domani cerco di risolvere il problema sicuro devo mappare meglio le porte
 
 19/4/23
-ricordarsi di fare il docker
+Oggi ho avuto dei problemi con lo swarm praticamente non riesco ad far andare in stato running il docker dello spring sul worker ma nel managere riesco a far runnare dallo stack del docker compose 
+il database, oggi il mio tutor non era reperibile e quindi mi sono dovuto arrangiare. Ho provato a vedere della roba con kubernetes mentre aspettavo che il mio tutor mi rispondesse.
+Praticamnete il mio problema è che non si connette il worker al spring 
+
+20/4/23
+gioranta di smart, oggi mi ha contattaato il mio tutor in cui mi ha suggerito di fare cosiì nel deploy dello stack, ---with-registry-auth = estende la login alla altre imagini 
+sotto deploy docker  stack deploy, di mettere lo spring anche sul manager , ip del worker per testare la chiamata swagger e di usare apache jmiter per fare stress test
+nell'applicazione. 
+
+21/4/23
