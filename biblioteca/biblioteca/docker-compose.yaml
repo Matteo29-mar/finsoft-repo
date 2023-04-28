@@ -2,18 +2,12 @@ version: "3.9"
 
 services:
   springdocker:
-    image: spring:2.0
+    image: matteo29mar/spring:2.1
     
     ports:
       - "8080:8080"
     networks:
-      - netspringstack
-    deploy:
-      replicas: 1
-      placement:
-        constraints: [ node.role == worker ]
-      restart_policy:
-        condition: on-failure
+      - netspring
     depends_on:
       - db-container
   db-container:
@@ -24,14 +18,8 @@ services:
     volumes:
       - my-mariadb:/var/lib/mysql
     networks:
-      - netspringstack
-    deploy:
-      placement:
-        constraints: [ node.role == manager ]
-      restart_policy:
-        condition: on-failure
+      - netspring
 volumes:
   my-mariadb:
 networks:
-  netspringstack:
-    driver: overlay
+  netspring:

@@ -475,3 +475,13 @@ sotto deploy docker  stack deploy, di mettere lo spring anche sul manager , ip
 nell'applicazione. 
 
 21/4/23
+docker service create --name springprova --restart-condition on-failure --replicas-max-per-node 1 --replicas 2 --with-registry-auth --publish 8080:8080 matteo29mar/spring:2.1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+26/4/23
+In questa giornata mi sono dedicato alla tesi per ITS
+
+27/4/23
+Sto attendendo per aws nel frattempo faccio la tesi 
+
+28/4/23
+Con oggi spero che mi dicono qualcosa nel mentre faccio la tesi
