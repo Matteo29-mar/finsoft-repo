@@ -484,4 +484,10 @@ In questa giornata mi sono dedicato alla tesi per ITS
 Sto attendendo per aws nel frattempo faccio la tesi 
 
 28/4/23
-Con oggi spero che mi dicono qualcosa nel mentre faccio la tesi
+Con oggi spero che mi dicono qualcosa nel mentre faccio la tesi, oggi mi hanno comunicato che martedì iniziero con il tipo di aws
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2/5/23
+oggi abbiamo fatto la call con quello di aws, ci hanno passato a lui e ci ha comunicato che faremo delle attività sul mondo aws.
+molto probabilmente deployeremo l'immagine docker su aws e quindi sarà messo nella tesi sta parte di aws.
+
+3/5/23
