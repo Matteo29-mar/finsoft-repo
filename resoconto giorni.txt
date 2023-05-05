@@ -491,3 +491,9 @@ oggi abbiamo fatto la call con quello di aws, ci hanno passato a lui e ci ha com
 molto probabilmente deployeremo l'immagine docker su aws e quindi sarà messo nella tesi sta parte di aws.
 
 3/5/23
+ho fatto l'inizializzazione dell'account aws cloud quest, è un gioco per imparare a gestire le problemi dei cloud di aws. 
+Nel gioco ho creato un bucket s3 per hostare un sito statico
+4/5/23
+sono andato avanti con il gioco ed ho fatto gli ec2 ed ho fatto la call con quelli di l3-cloud per aws, per mettere lo spring boot nel mondo aws
+
+5/5/23
