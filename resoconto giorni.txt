@@ -497,3 +497,5 @@ Nel gioco ho creato un bucket s3 per hostare un sito statico
 sono andato avanti con il gioco ed ho fatto gli ec2 ed ho fatto la call con quelli di l3-cloud per aws, per mettere lo spring boot nel mondo aws
 
 5/5/23
+fino a martedì 9 continuiamo con il gioco di aws, ho imparato come si usa la vpc tutta la parte inerente della network (in parte) in più ho continuato a fare quiz e imparare
+schemi di uso delle tecnologie di aws
