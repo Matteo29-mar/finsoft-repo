@@ -498,4 +498,15 @@ sono andato avanti con il gioco ed ho fatto gli ec2 ed ho fatto la call con quel
 
 5/5/23
 fino a martedì 9 continuiamo con il gioco di aws, ho imparato come si usa la vpc tutta la parte inerente della network (in parte) in più ho continuato a fare quiz e imparare
-schemi di uso delle tecnologie di aws
+schemi di uso delle tecnologie di aws.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8/5/23
+Con oggi la giornata verrà divisa in varie parti , ovvero dalle 9 00 alle 11 00/11 30 vado avanti con la tesi, 11 30 13 00 aws. Nel pomeriggio 14 30 fino alle 16 00 tesi e in fine dalle 16 30 fino alle 17 30 aws.
+
+9/5/23
+oggi abbiamo fatto conoscenza con due del team cloud di present, aqbbiamo fatto un po di aws cost explorer o comunemente chiamata calculator.
+Ci ha parlato di deployare lo spring boot su ambiente aws.
+In più oggi ho parlato con Roberto Leva il responsabile dell'azienda in cui mi ha comunicatoche sono stati molto contenti della mia persona e che sarebbero felici di prendermi
+dopo gli esami e continuare con il tirocinio.
+
+10/5/23
