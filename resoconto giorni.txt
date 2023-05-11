@@ -510,3 +510,10 @@ In più oggi ho parlato con Roberto Leva il responsabile dell'azienda in cui mi 
 dopo gli esami e continuare con il tirocinio.
 
 10/5/23
+Stessa cosa degloi altri giorni, tesi e aws.
+Però un mio colega è venuto a chiederemi di fargli una requisiti dei costi per la sua applicazione, ho guardato vari sewrvizi cloud, tra cui aws, azure ... alla fine sono andato per aruba.
+che è la cosa migliore per questo utente  dato che deve solo hostare invece servizi cloud come aws sono più per chi deve creare una infrastruttura da zero.
+
+11/5/23
+Oggi continuato con lo schema architetturale e la tesi.
+Ho fattoi la chiamata con il team di cloud per vedere come procedere per il restante dello stage. ovvero schema, aws calculator, discussione e build e deploy dell'ambiente.
