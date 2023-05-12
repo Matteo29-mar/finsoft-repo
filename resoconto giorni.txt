@@ -517,3 +517,11 @@ che è la cosa migliore per questo utente  dato che deve solo hostare invece ser
 11/5/23
 Oggi continuato con lo schema architetturale e la tesi.
 Ho fattoi la chiamata con il team di cloud per vedere come procedere per il restante dello stage. ovvero schema, aws calculator, discussione e build e deploy dell'ambiente.
+
+12/5/23
+Oggi ho fatto alcune cose interessanti.
+ho aiutato un collega con un problema con un dockerfile per un progetto java.
+sono andato avanti con le stime dell'appliczione spring boot ho fatto la suddivisione stima1 e stima2
+ho migliorato lo schema architetturale su drawio.net 
+ho visto il procedimento per installare aws cli (installata) e di partire da un dockerfile (praticamente un docker build) al pushare nel elastic container registry.
+andato avanti con la tesi 

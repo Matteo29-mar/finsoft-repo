@@ -1,0 +1,27 @@
+# Usa un'immagine di base contenente Amazon Corretto
+FROM amazoncorretto:latest
+
+# Aggiunge l'installazione di Maven alla immagine
+RUN yum -y install maven
+
+# Crea una directory per il tuo applicativo
+RUN mkdir /app
+WORKDIR /app
+
+# Copia il file pom.xml nella directory dell'applicativo
+COPY pom.xml .
+
+# Esegue il comando Maven per scaricare le dipendenze dell'applicativo
+RUN mvn dependency:resolve
+
+# Copia il codice sorgente dell'applicativo nella directory dell'applicativo
+COPY src /app/src
+
+# Esegue il comando Maven per compilare l'applicativo
+RUN mvn package
+
+# Esponi la porta sulla quale l'applicativo è in ascolto
+EXPOSE 8080
+
+# Avvia l'applicativo
+CMD ["java", "-jar", "target/nome-applicativo.jar"]
