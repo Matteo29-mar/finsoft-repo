@@ -8,7 +8,7 @@ poi ho fatto una piccola web app con nodejs solo get e conteinerizzata
 
 07/02/2023
 Giornata iniziata con l'assegnazione da parte del nostro tutor e un collega, di creare un sito web semplice del nostro curriculum, dato che non siamo web developer 
-non si apsettano un sito ben fatto, ma noi dobbiamo hostare il sito in un container il server web e possibilmente collegare un db per lanciarlo online.
+non si aspettano un sito ben fatto, ma noi dobbiamo hostare il sito in un container il server web e possibilmente collegare un db per lanciarlo online.
 il sito l'ho già quasi finito devo creare il container e tutta la parte docker.
 
 08/02/2023
@@ -20,17 +20,19 @@ cambio approccio metto un link alla mia email e un form sempre.
 giorno di smart working, continuo la mia progettazione di questo sito a cui collegherò un database e si interfaccierà con php. 
 ho pensato di mettere un link ancora dei miei social e un form di commenti dove l'utente scrive il nome e il contenuto che vuole
 e questi caricati sul database.
-Ci sono state delle difficoltà per dei permessi all'interno della macchina, quindi ho spostato il lavoro su un'altra macchina, li ho scaricato dei pacchetti di php, apache2 e mariadb server che avevo utilizzato per nextcloud, scaricato tutto ho fatto il db con le tabelle.
+Ci sono state delle difficoltà per dei permessi all'interno della macchina, quindi ho spostato il lavoro su un'altra macchina, li ho scaricato dei pacchetti di php, 
+apache2 e mariadb server che avevo utilizzato per nextcloud, scaricato tutto ho fatto il db con le tabelle.
 Funziona!! manda il commento per visualizzarlo ho scaricato phpmyadmin e vedo i commenti.
 
 10/02/2023
 inzio con aggiustare il css e aggiungo il footer.
-mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i commenti che scrivo io.
+mi è satto suggerito di fare una sezione login, interessante penso di procedere così nella sezione login una volta acceduto in base all'email posso vedere i 
+commenti che scrivo io.
 Effetuata la sezione register e login, ho fatto html e il php la registrazione avviene ci sono dei problemi con il login.
 Risolto il problema del login, php non gli piacciono gli echo mettere i printf, manca solo hash della password.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 13/02/2023
-Inizio giornata mi reco in ufficio, il bus ha fatto tardi.
+Inizio giornata mi reco in ufficio.
 Effettuo dei test register e login funzionano, in metà mattinata faccio hash della password(10 30) funziona, dava solo dedi problemami per la
 lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia registrato o che digiti una password errata non può entrare
  Adesso mi dedico alla parte della sezione privata. la sezione privata funziona, ma devo vedere cosa mettere nelle varie sezioni root e utente.
@@ -53,6 +55,7 @@ lunghezza ho aumentato la stringa nel db da 50 a 255. In caso l'utente non sia r
 16/02/2023
 giorno da remoto, mi dedico al dockerfile come ultima cosa tanto il progetto portofolio è finito domani ci spiegano 
 il nostro progetto e lunedì lo iniziamo.
+Alla fine non ho fatto il dockerfile.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 20/02/2023
@@ -71,14 +74,14 @@ la giornata è terminata con la creazione del team, lo schema relazionale che do
 e la creazione delle tabelle
 
 21/02/2023
-mattinata iniziata con la revisione del database, ho apsettato che i miei colleghi facessero e pushassero su main i loro front-end dell'area privata e del form.
+mattinata iniziata con la revisione del database, ho aspettato che i miei colleghi facessero e pushassero su main i loro front-end dell'area privata e del form.
 ho conluso la mattinata facendo il diagramma e il il database.
 nel pomeriggio farò delel cartelle per il db e magari del back-end di qualche passsaggio.
 
 22/02/2023
-assegnati i nuovi task della giorata, mi affretto a testare il back end della pagina login e regisstrazione non appena il mio collega pusha su git hub il suo lavoro. nel pomeriggio
-inizio a testare.
-La maggior parte del lavoro che avevamo fatto no vabene. il form del privato per caricare l'immagine e i dati 
+assegnati i nuovi task della giornata, mi affretto a testare il back end della pagina login e registrazione non appena il mio collega pusha su git hub il suo lavoro. 
+nel pomeriggio inizio a testare.
+La maggior parte del lavoro che avevamo fatto non vabene. il form del privato per caricare l'immagine e i dati 
 dell'utente troppo povera dovremmo aggiungere una navabar, footer e immagine di sfondo. Sono venute
 delle complicanze su cosa decidere per il css perchè la pagina privato e azienda non sono uguali. Quindi è da fare
 ache l'azienda da capo.
@@ -104,13 +107,14 @@ ora provo a fare la pagina di visualizzazione  delle aziende per la proposta e p
 questo giorno affronto symfony per l'invio delle email, i file che servono solo è installare il composer tramite php e sul sito symfony,
 composer require symfony/mailer, con questa riga ti installa il mailer nella cartella che vuoi e grazie all'aiuto di un tutor mi ha fornito il file 
 config_test.php per l'invio delle email e funziona in modo manuale devo ovviamente implementare il tutto ma l'installazione è completata.
-sono stati rilevati degli errori nell'organizzazione del progetto abbiamo preso la decisione di reiniziare da un punto comune
+sono stati rilevati degli errori nell'organizzazione del progetto abbiamo preso la decisione di reiniziare da un punto comune.
+symfony alla fine non l'ho fatto.
 
 28/02/2023
-la giornata si è aperta con noi, membri del gruppo che abbiamo ridisegnato la visualizzazioned delle cartelle e la loro logica. 
+la giornata si è aperta con noi, membri del gruppo che abbiamo ridisegnato la visualizzazione delle cartelle e la loro logica. 
 successivamente ho sistemato i vari file css, rinominato dei file e creato de i file per far combaciare quasi il tutto, il resto l'ho lasciato ai altri 
 membri del gruppo gli ultimi ritocchi.
-adesso ritorno al back-end dell'invio delle email, ma preden solo la prima
+adesso ritorno al back-end dell'invio delle email, ma prede solo la prima
 
 1/3/2023
 come prima cosa ho stamattina, ho risolto l'invio dell'email. funziona arrivano le email alle aziende registrate
@@ -118,8 +122,8 @@ nella mattinata ho incominciato a vedere per la dashboard aziendale i modali pop
 un prodotto.
 
 2/3/23
-giornata iniziata con un po di problemi, sono in smart e il mio pc non era aggoirnatao con gli uiltimi
-agfgiornamenti fatti, per promemoria bisogna creare la cartella uploads e poi andare su terminale con root
+giornata iniziata con un po di problemi, sono in smart e il mio pc non era aggiornato con gli ultimi
+aggiornamenti fatti, per promemoria bisogna creare la cartella uploads e poi andare su terminale con root
 dare i permessi 777 alla cartella in questo caso ITS comando chmod 777 ITS, se non  dovesse funzionare
 endtro in ITS faccio ls -lah per guardare sia i file ma anche i permessi ablitati se i file sono in 777 aposto 
 se no bisogna prendere i file e metterli in 777 in questo modo chmod 777 uploads.php exempio, se poi volessimo avere
@@ -131,7 +135,7 @@ ho fatto l'upload dell'immagine, ma il clienti vuole più immagini da visualizza
 alla fine ho mergiato tutto e funziona
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 6/3/23
-lunedì mattina, disastro perchè git hub non mi fa pullare le modifiche, poi ho scoperto che era un probelam della chiave privata.
+lunedì mattina, disastro perchè git hub non mi fa pullare le modifiche, poi ho scoperto che era un problema della chiave privata.
 risolto questo scorpo che ho fatto questo errore, ho dato gli accesso 777 all'utente normale facendo avere gli stessi privilegi del root
 mettendolo allo stesso livello suo, ma non potendo più accedere al root. in sostenza ho divuto resettare da zero il pc perdendo tutta la giornata.
 
@@ -290,10 +294,11 @@ tab_indicators e tab_inner sono i due id che servono per tutto sia alla api infa
 funziona tutto le immagini rispettive nei caroselli 
 
 15/03/23
-mercoledì mi sono dedicato di come hostare la web app su aws, ho creato la vpc per accedere alla macchina facendo le regle di routing 80 e 22, successivamente ho 
+mercoledì mi sono dedicato di come hostare la web app su aws, ho creato la vpc per accedere alla macchina facendo le regole di routing 80 e 22, successivamente ho 
 creato una istanza ec2 con un debian da 1 gb di ram e 1vcpu per un 30 gb di spazio, avrei voluto attacarci bucket s3 per attacarci i file come css, js ...
 una volta creata però non potuto procedere perchè mi trovo dentro una vpn e dovrei da quello che ho capito modificare dei sttaggi della vpn dell'azienda e poi 
 perchè domani dovremmo fare un  colloquio con un'altra deivisione dell'azienda di cloud, non so ch aspettarmi, quindi domani niente smart vado a Torino.
+alla fine host su aws, l'ho fatto ma non ha portato a nulla per problemi di rete aziendale
 
 16/3/23
 Oggi siamo a Torino per  fare il colloquio con quelli del'altra divione dell'azienda, nel frattempo vado avanti con la web app. Mi sono assegnato una nuova issue 
@@ -344,7 +349,7 @@ la parte di sql injection è stata finita adesso la web app è protetta da quest
 inizio settimana, inziato con problemi sul server perchè ci hanno spento il db online. quinid abbiamo dovuto portare tutto in locale, menomale che avevo un backup 
 aggiornato a giovedì. Notizia domani ci spostano di progetto per lavorare sul progetto per volskvagen in cloud, bene.
 il progetto della web app verrà continuato dal nostro collega è stato fatto quasi tutto lasciamo il progetto ad un 90% del completamento. mancano delle piccolezze
-
+ps è stato un'errore di valutazione, non ci spostano nel progetto reale ma vogliono testare le nostre competenze con altre tecnologie
 
 21/3/23
 oggi si inizia con il nuovo progetto, java 17  con spring boot dei microservizi(bibloteca online),
