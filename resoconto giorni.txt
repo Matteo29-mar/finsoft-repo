@@ -525,3 +525,12 @@ sono andato avanti con le stime dell'appliczione spring boot ho fatto la suddivi
 ho migliorato lo schema architetturale su drawio.net 
 ho visto il procedimento per installare aws cli (installata) e di partire da un dockerfile (praticamente un docker build) al pushare nel elastic container registry.
 andato avanti con la tesi 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15/5/23
+lunedì oggi sono andato avanti con la tesi e lo schema architetturale in vista della chiamata di domani.
+
+16/5/23
+dopo la chiamata di sta mattina, ci sono dei miglioramenti da fare per  lo schema ovvero specificare le porte, scelgliere uno degli schemi e implementarlo in modo corretto
+e infine di vedere informazioni su aws ECS e aws app runner. in pratica ecs( fargate) serve per gestire i container docker utilizza il registry di ecr invece aws app runner
+serve per gestire in modo automatico l'infrastruttura dell'applicazione per  dedicarsi ad una migliore gestione del codice.
+infine quindi sto vedendo documentazione su ecs e app runner e il nuovo schema 
