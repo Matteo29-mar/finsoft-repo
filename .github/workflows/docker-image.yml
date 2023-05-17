@@ -1,0 +1,28 @@
+name: biblioteca CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:     
+  springdocker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+      - name: list files
+        run: ls -l
+      - name: Login to Docker Hub for biblioteca microservice
+        uses: docker/login-action@v2
+        with:
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+      - name: Build and push biblioteca docker image
+        uses: docker/build-push-action@v3
+        with:
+          file: "biblioteca/Dockerfile"
+          push: true
+          tags: matteo29mar/spring:${{github.run_number}}        
