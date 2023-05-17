@@ -31,9 +31,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
                 if ($row['ruolo'] == 'root') {
                     $_SESSION['is_root'] = true;
-                    header("location: root/privateroot.php");
+                    header("location: ../root/privateroot.php");
                 } else {
-                    header("location: user/private.php");
+                    header("location: ../user/private.php");
                 }
 
             } else {

@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
-
+  <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
@@ -18,10 +17,10 @@
   <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>IL MIO PROFILO - HOBBY</strong>
+        <strong>IL MIO PROFILO - PROGETTI</strong>
       </a>
       <div class="header__quick">
-        <a href="index.html"> HOME&nbsp;&nbsp;</a>
+        <a href="../index.html"> HOME&nbsp;&nbsp;</a>
         <a href="login.html"> LOGIN</a>
         <div class="icon-hamburger">
           <span></span>
@@ -34,32 +33,35 @@
   <div class="cover"
     style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/sky.jpg');">
     <div class="grid grid--center text-left" id="">
-      <div class="col-70 text-center pt-4 pb-3">
-        <br><br>
-        <h2>I MIEI HOBBY</h2>
+      <div class="col-70 text-left pt-4 pb-3">
+        <h2>I MIEI PROGETTI</h2>
       </div>
       <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/trading.jpeg">
-        <h4>Trading</h4>
-        <p>Questo mio hobby è particolare, perché vado a consultare grafici di vari asset finanziari( azioni, valute,
-          materie prime . . .) e in base a quello che vedo nei grafici, riesco a darmi le risposte del perché
-          succedono determinati eventi nel mondo.</p>
+        <img class="img-res img-small round" src="../img/nxc.jpg">
+        <h4>Nextcloud</h4>
+        <p>
+          Il progetto nasce dalla necessità di avere un proprio spazio sul cloud.
+          Per realizzarlo, ho utilizzato un computer che funge da server, sul quale ho installato Debian 11, Apache2,
+          MySQL, PHP, il software Nextcloud e Tailscale (servizio VPN).
+          Con questo sistema posso caricare documenti e file che in passato erano salvati localmente o su altri
+          provider.
+        </p>
       </div>
       <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/cali.jpg" alt="">
-        <h4>Calisthenics</h4>
-        <p>Il Calisthenics é molto importante per me, perché oltre a farmi rimanere in forma mi fa diminuire lo
-          stress e mi fa stare bene con me stesso</p>
-      </div>
-      <div class="col-33 mb-3">
-        <img class="img-res img-small round" src="img/lettura.jpeg">
-        <h4>lettura</h4>
-        <p>La lettura é un'attività che mi rilassa, leggo se posso nel tragitto per andare a scuola oppure quando
-          sono al bar con un bel caffè</p>
+        <img class="img-res img-small round" src="../img/has.jpg" alt="">
+        <h4>Home-Assistant</h4>
+        <p>
+          Il progetto ha l'obiettivo di avere un controllo completamente personalizzato della casa.
+          Per realizzarlo, ho usato un Raspberry Pi 4, un SSD da 250 GB (per salvare i backup e i file della casa) e
+          l'immagine di Home Assistant.
+          Con Home Assistant, posso controllare la casa da remoto tramite telefono o computer, accendere o spegnere le
+          luci, aprire le porte e, grazie a opportuni sensori, monitorare vari parametri.
+        </p>
       </div>
     </div>
 
   </div>
+
   <footer class="footer">
     <div class="grid grid--center text-center">
       <div class="col-25 mt-2">
@@ -76,7 +78,6 @@
   <p class="footer-bottom">
     Template by Matteo Marziano - <a href="">Privacy Policy</a>
   </p>
-
   <script>
     let item = document.querySelector('.icon-hamburger');
     item.addEventListener("click", function () {
