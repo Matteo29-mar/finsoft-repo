@@ -550,3 +550,17 @@ pensavo che dovessero creare loro la vpc e il tutto ma in realtà dobbiamo farla
 22/5/23
 Oggi inizia ultima settimana di stage, un po giù sono perchè mi sono trovato molto bene qui, mi sono sentito impegnato e qualche volta sevito a qualcosa.
 Con oggi andiamo a lavorare su aws nella creazione della vpc, subnet e servizio ecs per deployare su cloud l'applicativo della biblioteca.
+
+23/5/23
+oggi non ho fatto nulla, in pratica ho tribulato tutto il giorno con le chiavi private per ec2. ho lasciato perdere ecs tanto non funziona.
+appena torno a casa provo con le ec2 su windows per putty, funziona domani porto il pc in ufficio
+
+24/5/23
+Giorno memorabile, sono riuscito a far partire un ec2 con ami di linux amazon, t2.micro ho  installato docker e fatto partire i container in modo separato.
+per far vedere l'applicativo online ho dovuto incollare l'indirizzo ip publico + la mappatura ovvero dns_pubblico:8080/swagger-ui/index.html così sono riscito a far vedere lo swagger anche
+all'esterno. ovviamente ho dovuto impostare le porte da security group in modo tale che prendesse la porta 8080 dall'esterno e anche quando ho fatto partire il container gli ho esposto la 8080:8080
+Dei miglioramenti da fare sono:
+1) impostare una vpc corretta
+2) impostare regole più specifiche d'ingresso e non tutte le porte
+3) attaccare un database rds per parlare con ec2
+4)fare il front end 
